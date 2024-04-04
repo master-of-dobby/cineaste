@@ -91,20 +91,24 @@ body {
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
+.button-container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
 .submit-btn {
-  display: inline-block;
   padding: 0.5rem 1rem;
   background-color: aliceblue; /* Blue background color */
-  color: #fff; /* White text color */
   border: none;
   border-radius: 0.5rem;
   font-size: 1.5rem;
-  font-weight: 550;
   width: 8rem;
-  height: 3rem;
+  text-align: center;
   color: black;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .submit-btn:hover {
@@ -150,3 +154,4 @@ body {
 .register-form .login-form-content {
   height: 70vh;
 }
+

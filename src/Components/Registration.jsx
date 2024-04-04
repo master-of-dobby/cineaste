@@ -1,6 +1,7 @@
 import "../index.css";
 import React from "react";
 import loginImage from "../common/login-reg.jpeg";
+import { Link } from 'react-router-dom';
 
 function Registration() {
   return (
@@ -50,9 +51,12 @@ function Registration() {
               required
             />{" "}
             <br />
-            <button className="submit-btn" type="submit">
-              Register
-            </button>
+            <div className="button-container">
+              <button className="submit-btn" type="submit">Register</button> 
+              <Link to="/">
+                <button className="submit-btn">Login</button>
+              </Link>
+            </div>
           </form>
         </div>
       </div>
