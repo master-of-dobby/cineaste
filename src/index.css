@@ -1,0 +1,152 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+}
+
+.login-theme {
+  height: 100vh;
+  overflow: hidden;
+  flex: 1;
+  /* filter: brightness(10); */
+  box-shadow: 10px 10px 10px 20px #2874a6;
+}
+
+.login-theme img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(50%);
+}
+.login-form {
+  flex: 1;
+  width: 60%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9fe2bf;
+}
+
+.login-title {
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: 2rem;
+}
+
+.login-label {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.login-form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login-form-content input {
+  font-size: large;
+  height: 2.5rem;
+  width: 20rem;
+  padding: 0.5rem; /* Add padding for better spacing inside the input */
+  border-radius: 1rem;
+  border: 1px solid #ccc; /* Add a subtle border */
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: box-shadow 0.3s ease; /* Add a transition for smooth hover effect */
+}
+
+.login-form-content input:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Increase shadow on focus for a subtle highlight */
+}
+
+/* Style placeholder text */
+.login-form-content input::placeholder {
+  color: #999; /* Adjust placeholder text color */
+}
+
+/* Style hover effect */
+.login-form-content input:hover {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: aliceblue; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 550;
+  width: 8rem;
+  height: 3rem;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  font-weight: 700;
+  color: white;
+  background-color: #2874a6; /* Darker blue color on hover */
+}
+
+.register-form {
+  background-color: #9fe2bf;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-form-content a {
+  height: 1.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #2c3e5d;
+  transition: all 0.3s;
+  font-weight: 500;
+  font-size: large;
+  margin: 1rem;
+}
+.register-form .login-title h1 {
+  height: 14vh;
+  margin: 0;
+}
+@media (max-width: 576px) {
+  .login .login-theme {
+    display: none;
+  }
+}
+
+.register-form .login-label h1 {
+  margin: 0;
+  height: 11vh;
+}
+.register-form .login-form-content {
+  height: 70vh;
+}
