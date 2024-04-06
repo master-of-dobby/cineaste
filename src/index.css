@@ -141,6 +141,43 @@ body {
   height: 14vh;
   margin: 0;
 }
+
+
+.redirect-div {
+  background-color: #9fe2bf;
+  border-radius: 2rem;
+  width: 80vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.redirect-div h1{
+  font-size: larger;
+}
+
+.redirect-div button{
+  background-color: wheat;
+  border-radius: 1rem;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  border: none;
+}
+
+.redirect-div button:hover{
+  background-color: gold;
+
+}
+
+
+
+
+
 @media (max-width: 576px) {
   .login .login-theme {
     display: none;
