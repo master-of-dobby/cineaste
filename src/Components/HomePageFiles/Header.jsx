@@ -39,14 +39,17 @@ function Header() {
           <span className="navbar-icon"></span>
         </button>
         <div className={`navbar-links ${isOpen ? "active" : ""}`}>
-          <Link to="/home" className="nav-link" onClick={toggleNavbar}>
+          <Link to="/homepage" className="nav-link" onClick={toggleNavbar}>
             Home
           </Link>
-          <Link to="/about" className="nav-link" onClick={toggleNavbar}>
-            About
+          <Link to="/movies" className="nav-link" onClick={toggleNavbar}>
+            Movies
           </Link>
-          <Link to="/services" className="nav-link" onClick={toggleNavbar}>
-            Services
+          <Link to="/bookings" className="nav-link" onClick={toggleNavbar}>
+            Bookings
+          </Link>
+          <Link to="/profile" className="nav-link" onClick={toggleNavbar}>
+            Profile
           </Link>
         </div>
       </div>
