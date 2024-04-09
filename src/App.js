@@ -16,8 +16,8 @@ function App() {
           <Route exact path="/" Component={Login}/>
           <Route path="/register" Component={Registration}/>
           <Route path="/redirect/:email/:otp" Component={Redirect}/>
-          <Route path="/Homepage" Component={Homepage}/>
-          <Route path="/Movies" Component={Movies}/>
+          <Route path="/homepage" Component={Homepage}/>
+          <Route path="/movies" Component={Movies}/>
         </Routes>
       </Router>
     </>

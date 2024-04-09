@@ -14,11 +14,12 @@ const Carousel = ({ movies }) => {
   }, [movies.length]);
 
   return (
-    <div className="carousel">
+    <div className="carousel-div">
       {movies.map((movie, index) => (
         <div
           key={index}
           className={`slide ${index === currentIndex ? 'active' : ''}`}
+          id='slide'
           style={{ backgroundImage: `url(${movie.image})` }}
         >
         </div>
