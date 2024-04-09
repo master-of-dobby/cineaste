@@ -1,5 +1,5 @@
 import React from "react";
-import loginImage from "../common/login-reg.jpeg"; // Import the image
+import loginImage from "../Assets/login-reg.jpeg"; // Import the image
 import "../index.css";
 import { Link } from 'react-router-dom';
 

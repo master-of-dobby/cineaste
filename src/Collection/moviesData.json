@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Hanu-man",
+    "image": "https://image.tmdb.org/t/p/original/aMpUiVX45dHD9XNsvDCEi0i4vrO.jpg",
+    "genre": "Action/Adventure/Fantasy"
+  },
+  {
+    "title": "The Family Star",
+    "image": "https://image.tmdb.org/t/p/original/wcPPVnioL7vbeAuplDhq6PEkRPq.jpg",
+    "genre": "Action/Comedy/Family"
+  },
+  {
+    "title": "Tillu Sqaure",
+    "image": "https://image.tmdb.org/t/p/original/bdzi5up1CnAyeAyptLoIq5HiHJn.jpg",
+    "genre": "Action/Comedy/Romantic"
+  },
+  {
+    "title": "The Goat Life",
+    "image": "https://image.tmdb.org/t/p/original/l7z3Skv1xLASnUt0whC4IInaXt0.jpg",
+    "genre": "Adventure/Drama"
+  },
+  {
+    "title": "Godzilla x Kong",
+    "image": "https://image.tmdb.org/t/p/original/3Po4Ln1ut9g2rIEh5PkVvb7Aoj1.jpg",
+    "genre": "Action/Sci-Fi/Thriller"
+  },
+  {
+    "title": "Bade Miyan Chote Miyan",
+    "image": "https://image.tmdb.org/t/p/original/brlLJx1WntkSE6K7nAkwWINv379.jpg",
+    "genre": "Action/Comedy/Thriller"
+  },
+  {
+    "title": "Maidaan",
+    "image": "https://image.tmdb.org/t/p/original/8zkT9CHAr8hDD4kyWPvUYiDC8Fg.jpg",
+    "genre": "Biography/Drama/Sports"
+  },
+  {
+    "title": "Civil War",
+    "image": "https://image.tmdb.org/t/p/original/jwq1edSTVKVVERLQ5H0KCfCWLWX.jpg",
+    "genre": "Action/Thriller"
+  },
+  {
+    "title": "Salaar",
+    "image": "https://image.tmdb.org/t/p/original/vzzeYSh6QYyN9CcY0EmdZJvXH4l.jpg",
+    "genre": "Action/Thriller"
+  },
+  {
+    "title": "Premalu",
+    "image": "https://image.tmdb.org/t/p/original/1PVrVLt7WkiOvb0HdbtVa93nU4T.jpg",
+    "genre": "Comedy/Romantic"
+  }
+]

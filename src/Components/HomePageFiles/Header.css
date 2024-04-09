@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+}
+  
+.middle {
+    display: flex;
+    align-items: center;
+}
+  
+.middle input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    width: 200px;
+}
+  
+.middle button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #918e8e;
+    color: white;
+    cursor: pointer;
+}
+
+.middle button:hover {
+    background-color: #918e8e93;
+}
+  
+.right {
+    display: flex;
+    align-items: center; /* Centering vertically */
+}
+  
+.right .nav-link {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+  
+.right .nav-link:hover {
+    text-decoration: underline;
+}
