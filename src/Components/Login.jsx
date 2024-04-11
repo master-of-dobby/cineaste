@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import loginImage from "../Assets/login-reg.jpeg"; // Import the image
 import "../index.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const validateCred = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`http://localhost:8080/login`, {
+        email: email,
+        password: password,
+      });
+      console.log("Login Successfull", response);
+    } catch (err) {
+      setError(err.response || "An error occured");
+      console.log("Login Error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="login">
       <div className="login-theme">
@@ -18,17 +40,35 @@ function Login() {
         </div>
 
         <div>
-          <form className="login-form-content">
+          <form className="login-form-content" onSubmit={validateCred}>
             {/* <label>Email</label> */}
-            <input type="email" name="email" placeholder="Email" required/>
+            <input
+              value={email}
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
             <br />
             {/* <label>Password</label> */}
-            <input type="text" name="password" placeholder="Password" required/>
+            <input
+              type="text"
+              value={password}
+              name="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
             <br />
             {/* <a href="./register" className="sign-up-btn">Sign Up</a> */}
             <div className="button-container">
-              <button className="submit-btn" type="submit">Login</button>
-              <Link to="./register"> 
+              <button className="submit-btn" type="submit" disabled={loading}>
+                {/* {loading ? "Logging in..." : "Login"} */}
+                Login
+              </button>
+              {error && <p style={{ color: "red" }}>{error}</p>}
+              <Link to="./register">
                 <button className="submit-btn">Register</button>
               </Link>
             </div>

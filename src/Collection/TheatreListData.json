@@ -1,0 +1,190 @@
+[
+  {
+    "id": 202,
+    "name": "NAAN-SHOWS",
+    "amenities": ["AC", "DOLBY ATMOS", "8DX"],
+    "capacity": 500,
+    "goldCapacity": 250,
+    "diamondCapacity": 150,
+    "platinumCapacity": 100,
+    "movie": {
+      "id": 1,
+      "name": "Titanic",
+      "genre": ["Adventurous", "Epic", "Romance"],
+      "language": "English",
+      "rating": 4.9,
+      "releaseDate": "1991-10-10T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/kVrqfYjkTdQ",
+      "imageUrl": "https://image.tmdb.org/t/p/original/wOFY2xA3D3VHi3G6DPtrXXhPrqQ.jpg",
+      "description": " A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "11:00",
+        "price": 100,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 2,
+        "time": "02:00",
+        "price": 150,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 1,
+        "time": "07:00",
+        "price": 200,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      }
+    ],
+    "location": "Nagari"
+  },
+  {
+    "id": 252,
+    "name": "PVR Cinemas",
+    "amenities": ["AC", "IMAX", "DOLBY ATMOS"],
+    "capacity": 800,
+    "goldCapacity": 400,
+    "diamondCapacity": 250,
+    "platinumCapacity": 150,
+    "movie": {
+      "id": 10,
+      "name": "Inception",
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "language": "English",
+      "rating": 4.8,
+      "releaseDate": "2010-07-16T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/YoHD9XEInc0",
+      "imageUrl": "https://image.tmdb.org/t/p/original/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
+      "description": "A thief who enters the dreams of others to steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "11:00",
+        "price": 100,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 2,
+        "time": "02:00",
+        "price": 150,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 1,
+        "time": "07:00",
+        "price": 200,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      }
+    ],
+    "location": "Nagari"
+  },
+  {
+    "id": 253,
+    "name": "Silver Screens",
+    "amenities": ["AC", "IMAX", "DOLBY ATMOS"],
+    "capacity": 600,
+    "goldCapacity": 300,
+    "diamondCapacity": 200,
+    "platinumCapacity": 100,
+    "movie": {
+      "id": 10,
+      "name": "Inception",
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "language": "English",
+      "rating": 4.8,
+      "releaseDate": "2010-07-16T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/YoHD9XEInc0",
+      "imageUrl": "https://image.tmdb.org/t/p/original/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
+      "description": "A thief who enters the dreams of others to steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "11:00",
+        "price": 100,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 2,
+        "time": "02:00",
+        "price": 150,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 1,
+        "time": "07:00",
+        "price": 200,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      }
+    ],
+    "location": "Los Angeles"
+  },
+  {
+    "id": 256,
+    "name": "Silver Screens",
+    "amenities": ["AC", "IMAX", "DOLBY ATMOS"],
+    "capacity": 600,
+    "goldCapacity": 300,
+    "diamondCapacity": 200,
+    "platinumCapacity": 100,
+    "movie": {
+      "id": 102,
+      "name": "Avatar",
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "language": "English",
+      "rating": 4.8,
+      "releaseDate": "2009-12-18T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/5PSNL1qE6VY",
+      "imageUrl": "https://image.tmdb.org/t/p/original/6EiRUJpuoeQPghrs3YNktfnqOVh.jpg",
+      "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "11:00",
+        "price": 100,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 2,
+        "time": "02:00",
+        "price": 150,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      },
+      {
+        "id": 1,
+        "time": "07:00",
+        "price": 200,
+        "goldRemaining": 250,
+        "diamondRemaining": 150,
+        "platinumRemaining": 100
+      }
+    ],
+    "location": "Nagari"
+  }
+]
