@@ -1,0 +1,36 @@
+[
+    {
+      "movieImage": "https://image.tmdb.org/t/p/original/vzzeYSh6QYyN9CcY0EmdZJvXH4l.jpg",
+      "movieName": "Salaar",
+      "language": "Tamil",
+      "date": "15 Apr, Monday",
+      "time": "03:00 PM",
+      "theatreName": "PVR Cinemas",
+      "location": "Perambur",
+      "ticketsBooked": "2 Silver",
+      "seatNumbers": ["A1", "A2"]
+    },
+    {
+      "movieImage": "https://image.tmdb.org/t/p/original/aMpUiVX45dHD9XNsvDCEi0i4vrO.jpg",
+      "movieName": "Hanu-Man",
+      "language": "Telugu",
+      "date": "16 Apr, Tuesday",
+      "time": "06:30 PM",
+      "theatreName": "SV Cinemas",
+      "location": "Tirupati",
+      "ticketsBooked": "3 Platinum",
+      "seatNumbers": ["B5", "B6", "B7"]
+    },
+    {
+      "movieImage": "https://image.tmdb.org/t/p/original/l7z3Skv1xLASnUt0whC4IInaXt0.jpg",
+      "movieName": "The Goat Life",
+      "language": "Kannada",
+      "date": "17 Apr, Wednesday",
+      "time": "10:00 PM",
+      "theatreName": "INOX: Garuda Mall",
+      "location": "Bangalore",
+      "ticketsBooked": "2 Gold",
+      "seatNumbers": ["C3"]
+    }
+  ]
+  

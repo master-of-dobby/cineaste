@@ -14,7 +14,7 @@ function Header() {
     <header>
       <div className="navbar">
         <div className="left">
-          <Link to="/homepage">
+          <Link to="/home">
             <img src={favicon} alt="Favicon" className="favicon" />
           </Link>
         </div>

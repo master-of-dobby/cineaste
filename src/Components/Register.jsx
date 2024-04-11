@@ -4,7 +4,7 @@ import loginImage from "../Assets/login-reg.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Registration() {
+function Register() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -108,4 +108,4 @@ function Registration() {
   );
 }
 
-export default Registration;
+export default Register;
