@@ -26,7 +26,7 @@ const Movies = () => {
   // // }, [movies]);
 
   useEffect(() => {
-    setMovies(MovieDetailsData[3]);
+    setMovies(MovieDetailsData);
   }, []);
 
   const bookTicket = (movieId) => {
@@ -38,9 +38,9 @@ const Movies = () => {
   //   return <div>Error: {error.message}</div>; // Display error message
   // }
 
-  // if (!movies) {
-  //   return <div>Loading movies...</div>; // Display loading state
-  // }
+  if (!movies) {
+    return <div>Loading movies...</div>; // Display loading state
+  }
 
   return (
     <div>
@@ -48,18 +48,18 @@ const Movies = () => {
       <div className="movies-page">
         <h2>All Movies</h2>
         <div className="movies-container">
-          {/* {movies.map((movie, index) => ( */}
+          {movies.map((movie, index) => (
             <div className="movie-card" key={index}>
-              <img src={movie.imageUrl} alt={movie.title} />
+              <img src={movie.imageUrl} alt={movie.name} />
               <div className="movie-details">
                 <h3>{movie.name}</h3>
-                <p>{movie.genre}</p>
+                <p>{movie.genre.join(", ")}</p>
                 <button onClick={() => bookTicket(movie.id)}>
                   Book Tickets
                 </button>
               </div>
             </div>
-          {/* ))} */}
+          ))}
         </div>
       </div>
     </div>

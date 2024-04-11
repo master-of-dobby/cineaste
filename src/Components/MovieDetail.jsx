@@ -3,12 +3,13 @@ import Header from "./HomePageFiles/Header";
 // import axios from "axios";
 import "./Styles/MovieDetail.css";
 import { useNavigate } from "react-router-dom";
-// import { useParams } from "react-router-d
+import { useParams } from "react-router-dom";
 import MovieDetailsData from "../Collection/MovieDetailsData.json";
 
 function MovieDetail() {
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
+  const movieId = useParams();
 
   // const [error, setError] = useState(null);
   // const [loading, setLoading] = useState(true);
@@ -63,8 +64,10 @@ function MovieDetail() {
   // }
 
   useEffect(() => {
-    setMovie(MovieDetailsData[3]);
-  }, []);
+    const response = MovieDetailsData.find((m) => m.id === parseInt(movieId.movieId))
+    // console.log(response +  ' is response');
+    setMovie(response);
+  }, [movieId.movieId]);
   // console.log(movie + " det");
   // }, []);
 

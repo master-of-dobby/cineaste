@@ -186,5 +186,288 @@
       }
     ],
     "location": "Nagari"
+  },
+  {
+    "id": 101,
+    "name": "Golden Cinemas",
+    "amenities": ["AC", "4DX", "DOLBY ATMOS"],
+    "capacity": 500,
+    "goldCapacity": 200,
+    "diamondCapacity": 150,
+    "platinumCapacity": 100,
+    "movie": {
+      "id": 1001,
+      "name": "Spider-Man: No Way Home",
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "language": "English",
+      "rating": 4.8,
+      "releaseDate": "2021-12-17T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/WgUROo7n24E",
+      "imageUrl": "https://image.tmdb.org/t/p/original/7F0kvpC0rH2tBwxah5hJ5JSmzjG.jpg",
+      "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "11:00 AM",
+        "price": 150,
+        "goldRemaining": 180,
+        "diamondRemaining": 120,
+        "platinumRemaining": 80
+      },
+      {
+        "id": 2,
+        "time": "03:00 PM",
+        "price": 200,
+        "goldRemaining": 180,
+        "diamondRemaining": 120,
+        "platinumRemaining": 80
+      },
+      {
+        "id": 3,
+        "time": "07:00 PM",
+        "price": 250,
+        "goldRemaining": 180,
+        "diamondRemaining": 120,
+        "platinumRemaining": 80
+      }
+    ],
+    "location": "New York"
+  },
+  {
+    "id": 102,
+    "name": "Diamond Theatres",
+    "amenities": ["AC", "IMAX", "D-BOX"],
+    "capacity": 700,
+    "goldCapacity": 300,
+    "diamondCapacity": 200,
+    "platinumCapacity": 200,
+    "movie": {
+      "id": 1005,
+      "name": "Dune",
+      "genre": ["Action", "Adventure", "Drama"],
+      "language": "English",
+      "rating": 4.9,
+      "releaseDate": "2021-09-15T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/8g18jFHCLXk",
+      "imageUrl": "https://image.tmdb.org/t/p/original/9dKCd55IuTT5QRs989m9Qlb7d2B.jpg",
+      "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and people."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "10:00 AM",
+        "price": 150,
+        "goldRemaining": 280,
+        "diamondRemaining": 180,
+        "platinumRemaining": 180
+      },
+      {
+        "id": 2,
+        "time": "02:00 PM",
+        "price": 200,
+        "goldRemaining": 280,
+        "diamondRemaining": 180,
+        "platinumRemaining": 180
+      },
+      {
+        "id": 3,
+        "time": "06:00 PM",
+        "price": 250,
+        "goldRemaining": 280,
+        "diamondRemaining": 180,
+        "platinumRemaining": 180
+      }
+    ],
+    "location": "Arrakis"
+  },
+  {
+    "id": 101,
+    "name": "Platinum Cinemas",
+    "amenities": ["AC", "IMAX", "4DX"],
+    "capacity": 800,
+    "goldCapacity": 350,
+    "diamondCapacity": 250,
+    "platinumCapacity": 200,
+    "movie": {
+      "id": 1006,
+      "name": "Avengers: Endgame",
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "language": "English",
+      "rating": 4.7,
+      "releaseDate": "2019-04-26T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/TcMBFSGVi1c",
+      "imageUrl": "https://image.tmdb.org/t/p/original/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+      "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "10:00 AM",
+        "price": 150,
+        "goldRemaining": 320,
+        "diamondRemaining": 200,
+        "platinumRemaining": 180
+      },
+      {
+        "id": 2,
+        "time": "02:00 PM",
+        "price": 200,
+        "goldRemaining": 320,
+        "diamondRemaining": 200,
+        "platinumRemaining": 180
+      },
+      {
+        "id": 3,
+        "time": "06:00 PM",
+        "price": 250,
+        "goldRemaining": 320,
+        "diamondRemaining": 200,
+        "platinumRemaining": 180
+      }
+    ],
+    "location": "New York"
+  },
+  {
+    "id": 1024,
+    "name": "Diamond Theatres",
+    "amenities": ["AC", "IMAX", "D-BOX"],
+    "capacity": 700,
+    "goldCapacity": 300,
+    "diamondCapacity": 200,
+    "platinumCapacity": 200,
+    "movie": {
+      "id": 1006,
+      "name": "Avengers: Endgame",
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "language": "English",
+      "rating": 4.7,
+      "releaseDate": "2019-04-26T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/TcMBFSGVi1c",
+      "imageUrl": "https://image.tmdb.org/t/p/original/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+      "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "10:00 AM",
+        "price": 150,
+        "goldRemaining": 280,
+        "diamondRemaining": 180,
+        "platinumRemaining": 180
+      },
+      {
+        "id": 2,
+        "time": "02:00 PM",
+        "price": 200,
+        "goldRemaining": 280,
+        "diamondRemaining": 180,
+        "platinumRemaining": 180
+      },
+      {
+        "id": 3,
+        "time": "06:00 PM",
+        "price": 250,
+        "goldRemaining": 280,
+        "diamondRemaining": 180,
+        "platinumRemaining": 180
+      }
+    ],
+    "location": "Arrakis"
+  },
+
+  {
+    "id": 103,
+    "name": "Golden Theatres",
+    "amenities": ["AC", "IMAX", "Dolby Atmos"],
+    "capacity": 750,
+    "goldCapacity": 350,
+    "diamondCapacity": 200,
+    "platinumCapacity": 200,
+    "movie": {
+      "id": 4,
+      "name": "Pulp Fiction",
+      "genre": ["Crime", "Drama"],
+      "language": "English",
+      "rating": 8.9,
+      "releaseDate": "1994-10-14T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/s7EdQ4FqbhY",
+      "imageUrl": "https://image.tmdb.org/t/p/original/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
+      "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "11:00 AM",
+        "price": 120,
+        "goldRemaining": 300,
+        "diamondRemaining": 180,
+        "platinumRemaining": 150
+      },
+      {
+        "id": 2,
+        "time": "03:00 PM",
+        "price": 180,
+        "goldRemaining": 300,
+        "diamondRemaining": 180,
+        "platinumRemaining": 150
+      },
+      {
+        "id": 3,
+        "time": "07:00 PM",
+        "price": 220,
+        "goldRemaining": 300,
+        "diamondRemaining": 180,
+        "platinumRemaining": 150
+      }
+    ],
+    "location": "Los Angeles"
+  },
+  {
+    "id": 104,
+    "name": "Starlight Cinemas",
+    "amenities": ["AC", "Dolby Atmos"],
+    "capacity": 600,
+    "goldCapacity": 250,
+    "diamondCapacity": 200,
+    "platinumCapacity": 150,
+    "movie": {
+      "id": 4,
+      "name": "Pulp Fiction",
+      "genre": ["Crime", "Drama"],
+      "language": "English",
+      "rating": 8.9,
+      "releaseDate": "1994-10-14T00:00:00.000+00:00",
+      "trailerUrl": "https://www.youtube.com/embed/s7EdQ4FqbhY",
+      "imageUrl": "https://image.tmdb.org/t/p/original/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
+      "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+    },
+    "showTime": [
+      {
+        "id": 1,
+        "time": "12:00 PM",
+        "price": 100,
+        "goldRemaining": 230,
+        "diamondRemaining": 180,
+        "platinumRemaining": 120
+      },
+      {
+        "id": 2,
+        "time": "04:00 PM",
+        "price": 150,
+        "goldRemaining": 230,
+        "diamondRemaining": 180,
+        "platinumRemaining": 120
+      },
+      {
+        "id": 3,
+        "time": "08:00 PM",
+        "price": 200,
+        "goldRemaining": 230,
+        "diamondRemaining": 180,
+        "platinumRemaining": 120
+      }
+    ],
+    "location": "New York"
   }
 ]

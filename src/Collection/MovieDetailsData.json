@@ -12,30 +12,6 @@
     "location": "Nagari"
   },
   {
-    "id": 3,
-    "name": "Titanic",
-    "genre": ["Adventurous", "Epic", "Romance"],
-    "language": "English",
-    "rating": 4.9,
-    "releaseDate": "1991-10-10T00:00:00.000+00:00",
-    "trailerUrl": "https://www.youtube.com/embed/kVrqfYjkTdQ",
-    "imageUrl": "https://image.tmdb.org/t/p/original/wOFY2xA3D3VHi3G6DPtrXXhPrqQ.jpg",
-    "description": " A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
-    "location": "Nagari"
-  },
-  {
-    "id": 5,
-    "name": "Titanic",
-    "genre": ["Adventurous", "Epic", "Romance"],
-    "language": "English",
-    "rating": 4.9,
-    "releaseDate": "1991-10-10T00:00:00.000+00:00",
-    "trailerUrl": "https://www.youtube.com/embed/kVrqfYjkTdQ",
-    "imageUrl": "https://image.tmdb.org/t/p/original/wOFY2xA3D3VHi3G6DPtrXXhPrqQ.jpg",
-    "description": " A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
-    "location": "Nagari"
-  },
-  {
     "id": 10,
     "name": "Inception",
     "genre": ["Action", "Adventure", "Sci-Fi"],
@@ -46,5 +22,92 @@
     "imageUrl": "https://image.tmdb.org/t/p/original/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
     "description": "A thief who enters the dreams of others to steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves.",
     "location": "Los Angeles"
+  },
+
+  {
+    "id": 123,
+    "name": "The Shawshank Redemption",
+    "genre": ["Drama"],
+    "language": "English",
+    "rating": 4.9,
+    "releaseDate": "1994-10-14T00:00:00.000+00:00",
+    "trailerUrl": "https://www.youtube.com/embed/6hB3S9bIaco",
+    "imageUrl": "https://image.tmdb.org/t/p/original/3YhI0q3TkT6QVIEVditIemlGmsC.jpg",
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "location": "Maine"
+  },
+  {
+    "id": 243,
+    "name": "The Godfather",
+    "genre": ["Crime", "Drama"],
+    "language": "English",
+    "rating": 4.8,
+    "releaseDate": "1972-03-14T00:00:00.000+00:00",
+    "trailerUrl": "https://www.youtube.com/embed/sY1S34973zA",
+    "imageUrl": "https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "location": "New York"
+  },
+  {
+    "id": 354,
+    "name": "The Dark Knight",
+    "genre": ["Action", "Crime", "Drama"],
+    "language": "English",
+    "rating": 4.7,
+    "releaseDate": "2008-07-18T00:00:00.000+00:00",
+    "trailerUrl": "https://www.youtube.com/embed/EXeTwQWrcwY",
+    "imageUrl": "https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "location": "Gotham City"
+  },
+  {
+    "id": 4,
+    "name": "Pulp Fiction",
+    "genre": ["Crime", "Drama"],
+    "language": "English",
+    "rating": 4.0,
+    "releaseDate": "1994-10-14T00:00:00.000+00:00",
+    "trailerUrl": "https://www.youtube.com/embed/s7EdQ4FqbhY",
+    "imageUrl": "https://image.tmdb.org/t/p/original/5kD1o6exM1RbauVLJjtNzseiM1Q.jpg",
+    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "location": "Los Angeles"
+  },
+
+  {
+    "id": 1001,
+    "name": "Spider-Man: No Way Home",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "language": "English",
+    "rating": 4.8,
+    "releaseDate": "2021-12-17T00:00:00.000+00:00",
+    "trailerUrl": "https://www.youtube.com/embed/JfVOs4VSpmA?si=Y1KdD9Pxoi0EAIFz",
+    "imageUrl": "https://image.tmdb.org/t/p/original/zD5v1E4joAzFvmAEytt7fM3ivyT.jpg",
+    "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+    "location": "New York"
+  },
+
+  {
+    "id": 1005,
+    "name": "Dune",
+    "genre": ["Action", "Adventure", "Drama"],
+    "language": "English",
+    "rating": 4.9,
+    "releaseDate": "2021-09-15T00:00:00.000+00:00",
+    "trailerUrl": "https://www.youtube.com/embed/8g18jFHCLXk",
+    "imageUrl": "https://image.tmdb.org/t/p/original/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
+    "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and people.",
+    "location": "Arrakis"
+  },
+  {
+    "id": 1006,
+    "name": "Avengers: Endgame",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "language": "English",
+    "rating": 4.7,
+    "releaseDate": "2019-04-26T00:00:00.000+00:00",
+    "trailerUrl": "https://www.youtube.com/embed/TcMBFSGVi1c",
+    "imageUrl": "https://image.tmdb.org/t/p/original/9wXPKruA6bWYk2co5ix6fH59Qr8.jpg",
+    "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    "location": "New York"
   }
 ]
