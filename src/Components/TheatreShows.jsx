@@ -6,6 +6,7 @@ function TheatreShows(props) {
       <div className="theatre-list-det">
         {props.theatre.name} {props.theatre.amenities.join(" ")} :{" "}
         {props.theatre.location}
+        <p style={{fontSize:"17px"}}>Non Cancellable</p>
       </div>
       <div className="theatre-list-showtimes">
         <div className="showtimes">

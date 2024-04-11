@@ -68,7 +68,7 @@
     "showTime": [
       {
         "id": 1,
-        "time": "11:00",
+        "time": "11:00 AM",
         "price": 100,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -76,7 +76,7 @@
       },
       {
         "id": 2,
-        "time": "02:00",
+        "time": "02:00 PM",
         "price": 150,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -84,7 +84,7 @@
       },
       {
         "id": 1,
-        "time": "07:00",
+        "time": "07:00 PM",
         "price": 200,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -115,7 +115,7 @@
     "showTime": [
       {
         "id": 1,
-        "time": "11:00",
+        "time": "11:00 AM",
         "price": 100,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -123,7 +123,7 @@
       },
       {
         "id": 2,
-        "time": "02:00",
+        "time": "02:00 PM",
         "price": 150,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -131,7 +131,7 @@
       },
       {
         "id": 1,
-        "time": "07:00",
+        "time": "07:00 PM",
         "price": 200,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -162,7 +162,7 @@
     "showTime": [
       {
         "id": 1,
-        "time": "11:00",
+        "time": "11:00 AM",
         "price": 100,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -170,7 +170,7 @@
       },
       {
         "id": 2,
-        "time": "02:00",
+        "time": "02:00 PM",
         "price": 150,
         "goldRemaining": 250,
         "diamondRemaining": 150,
@@ -178,7 +178,7 @@
       },
       {
         "id": 1,
-        "time": "07:00",
+        "time": "07:00 PM",
         "price": 200,
         "goldRemaining": 250,
         "diamondRemaining": 150,
