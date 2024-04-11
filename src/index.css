@@ -101,6 +101,7 @@ body {
   padding: 0.5rem 1rem;
   background-color: aliceblue; /* Blue background color */
   border: none;
+  margin: 0.5rem;
   border-radius: 0.5rem;
   font-size: 1.5rem;
   width: 8rem;
@@ -131,16 +132,6 @@ body {
   overflow: hidden;
 }
 
-.login-form-content a {
-  height: 1.5rem;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: #2c3e5d;
-  transition: all 0.3s;
-  font-weight: 500;
-  font-size: large;
-  margin: 1rem;
-}
 .register-form .login-title h1 {
   height: 14vh;
   margin: 0;

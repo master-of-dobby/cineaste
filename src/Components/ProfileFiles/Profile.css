@@ -1,0 +1,131 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  .profile-card {
+    display: flex; 
+    flex-direction: column; 
+    position: relative; 
+    width: 70rem; 
+    padding: 1.5rem; 
+    border: 1px solid #ccc;
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image img {
+    width: 5rem; 
+    height: 5rem; 
+    border-radius: 50%;
+  }
+  
+  .profile-details {
+    margin-top: 1rem; 
+  }
+  
+  .profile-details h2 {
+    margin-top: 0;
+    text-align: start;
+  }
+  
+  .profile-details p {
+    margin: 0.5rem 0; 
+  }
+
+  .profile-pass {
+    margin-top: 20px;
+  }
+  
+  .profile-pass h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile-pass p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .buy-pass-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 10.5rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-pass-btn:hover {
+    background-color: #007bffb0 ; 
+  }
+
+  .buy-pass-btn:active {
+    background-color: #007bfff1 ; 
+  }
+  
+  .profile-buttons {
+    position: absolute; 
+    top: 1rem; 
+    right: 1rem; 
+    display: flex; 
+    justify-content: flex-end;  
+  }
+  
+  .edit-profile-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 8.5rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .edit-profile-btn:hover {
+    background-color: #007bffb0 ; 
+  }
+
+  .edit-profile-btn:active {
+    background-color: #007bfff1 ; 
+  }
+  
+  .logout-btn {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    width: 6rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout-btn:hover {
+    background-color: #dc3546c4;
+  }
+
+  .logout-btn:active {
+    background-color: #dc3546f3;
+  }
+  
