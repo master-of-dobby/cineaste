@@ -9,6 +9,8 @@ import Homepage from "./Components/Homepage";
 import Movies from "./Components/Movies";
 import UserProfile from "./Components/UserProfile";
 import Booking from "./Components/Booking";
+import MovieDetail from "./Components/MovieDetail";
+import TheatreList from "./Components/TheatreList";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/movies" Component={Movies}/>
           <Route path="/profile" Component={UserProfile}/>
           <Route path="/bookings" Component={Booking}/>
+          <Route path="/movies/movie-detail/:movieId" Component={MovieDetail}></Route>
+          <Route path="/theatres-list/:movieId" Component={TheatreList}></Route>
         </Routes>
       </Router>
     </>

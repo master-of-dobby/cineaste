@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: black;
 }
 
 .navbar-links {
@@ -10,8 +11,9 @@
 
 header {
   padding: 0px 20px;
-  background-color: #333;
+  background-color: #9fe2bf;
   overflow: hidden;
+  color: black;
 }
 
 .navbar-toggle {
@@ -21,6 +23,7 @@ header {
 .middle {
   display: flex;
   align-items: center;
+  border: none;
 }
 
 .middle input[type="text"] {
@@ -28,20 +31,22 @@ header {
   border-radius: 5px;
   border: none;
   margin-right: 10px;
-  width: 200px;
+  width: 20rem;
 }
 
 .middle button {
   padding: 8px;
   border: none;
-  border-radius: 5px;
-  background-color: #918e8e;
-  color: white;
+  font-size: 1.1rem;
+  font-weight:bolder;
+  border-radius: 0.5rem;
+  background-color: coral;
+  color: black;
   cursor: pointer;
 }
 
 .middle button:hover {
-  background-color: #918e8e93;
+  background-color: tomato;
 }
 
 .right {
@@ -51,12 +56,15 @@ header {
 
 .right .nav-link {
   margin-left: 20px;
-  color: white;
+  color: black;
   text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .right .nav-link:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  text-shadow: 0.1rem 0.1rem coral;
 }
 
 .navbar-toggle {
