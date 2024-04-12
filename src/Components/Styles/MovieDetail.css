@@ -105,6 +105,14 @@
   cursor: pointer;
 }
 
+.movie-details-desc .movie-book-ticket-desc .movie-book-ticket-button:hover {
+  background-color: rgba(0, 255, 55, 0.733);
+}
+
+.movie-details-desc .movie-book-ticket-desc .movie-book-ticket-button:active {
+  background-color: rgb(0, 255, 55);
+}
+
 .movie-description-container{
   width: 80%;
   display: flex;

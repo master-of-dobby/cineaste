@@ -42,7 +42,7 @@ function AddMovie() {
   return (
     <div className="add-movie-container">
       <div className="container">
-        <h2 style={{ color: "white" }}>Add New Movie</h2>
+        <h2>Add New Movie</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>

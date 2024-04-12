@@ -99,11 +99,11 @@
 }
 
 .edit-profile-btn:hover {
-  background-color: #007bffb0;
+  background-color: #007bffbb;
 }
 
 .edit-profile-btn:active {
-  background-color: #007bfff1;
+  background-color: #007bff;
 }
 
 .logout-btn {
@@ -152,11 +152,11 @@
 }
 
 .profile-admin-add-btns:hover {
-  background-color: #007bfff1;
+  background-color: #007bffbb;
 }
 
 .profile-admin-add-btns:active {
-  background-color: #007bfff1;
+  background-color: #007bff;
 }
 
 .user-pass-img{

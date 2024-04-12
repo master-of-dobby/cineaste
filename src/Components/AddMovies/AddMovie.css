@@ -1,5 +1,8 @@
 .add-movie-container {
-  background-image: url("https://img.freepik.com/free-photo/3d-render-dark-interior-with-spotlight-shining-down_1048-12676.jpg");
+  background-image: url("../../Assets/Add_Movie_Image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
@@ -11,24 +14,16 @@
 
 .movie-form {
   width: 50%;
-  color: white;
   margin: 3rem;
-  background-color: transparent;
-  background-color: #f4f4f4;
   padding: 20px;
-  border-radius: 5px;
 }
 
-
-
 .form-group {
-  background-color: transparent;
   margin-bottom: 20px;
 }
 
 label {
   color: white;
-  background-color: transparent;
   font-weight: bold;
 }
 
@@ -36,13 +31,6 @@ label {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-
-}
-
-.form-control:active{
-    background-color: white;
 }
 
 .btn-primary {
@@ -50,11 +38,15 @@ label {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
+}
+
+.btn-primary:active {
+  background-color: #007bff;
 }
