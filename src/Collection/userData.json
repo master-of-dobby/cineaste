@@ -1,8 +1,56 @@
-{
-  "id": "03",
-  "firstName": "Suresh",
-  "lastName": "Raina",
-  "email": "sureshraina03@gmail.com",
-  "location": "Chennai"
+[
+  {
+    "id": "03",
+    "firstName": "Suresh",
+    "lastName": "Raina",
+    "email": "sureshraina03@gmail.com",
+    "location": "Chennai",
+    "active": true,
+    "role": "ADMIN",
+    "hasPass": true,
+    "password": "123",
+    "pass": {
+      "passId": 15353,
+      "passType": "GOLDEN",
+      "moviesLeft": 10,
+      "price": 999,
+      "expiryDate": "12/05/2024"
+    }
+  },
+  {
+    "id": "07",
+    "firstName": "Tom",
+    "lastName": "Cruise",
+    "email": "cruisetom.07@gmail.com",
+    "location": "Los Angeles",
+    "active": true,
+    "role": "USER",
+    "hasPass": true,
+    "password": "12334",
+    "pass": {
+      "passId": 53433,
+      "passType": "SILVER",
+      "moviesLeft": 5,
+      "price": 499,
+      "expiryDate": "12/05/2024"
+    }
+  },
+  {
+    "id": "12",
+    "firstName": "Peter",
+    "lastName": "Parker",
+    "email": "peter.parker.12@gmail.com",
+    "location": "Queens",
+    "active": false,
+    "role": "USER",
+    "hasPass": true,
+    "password": "12334",
+    "pass": {
+      "passId": 53433,
+      "passType": "GOLDEN",
+      "moviesLeft": 9,
+      "price": 999,
+      "expiryDate": "12/05/2024"
+    }
   }
-  
+]

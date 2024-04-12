@@ -11,6 +11,7 @@ import UserProfile from "./Components/UserProfile";
 import Booking from "./Components/Booking";
 import MovieDetail from "./Components/MovieDetail";
 import TheatreList from "./Components/TheatreList";
+import AddMovie from "./Components/AddMovies/AddMovie";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/bookings" Component={Booking}/>
           <Route path="/movies/movie-detail/:movieId" Component={MovieDetail}></Route>
           <Route path="/theatres-list/:movieId" Component={TheatreList}></Route>
+          <Route path="/add-movie" Component={AddMovie}></Route>
         </Routes>
       </Router>
     </>
