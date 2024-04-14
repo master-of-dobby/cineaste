@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Matthew",
+    "age": 25,
+    "email": "matt@example.com",
+    "noOfSeats": 3,
+    "theatreName": "PVR Cinemas",
+    "bookingDate": "October 14, 2021",
+    "timeSlot": "11:00 AM - 1:00 PM",
+    "movieTitle": "Interstellar",
+    "isPassHolder": true,
+    "showPrice" : 150,
+    "pass": {
+      "passType": "golden",
+      "moviesLeft": 4
+    },
+
+    "seats": [
+      {
+        "seatType": "Diamond",
+        "seatNumber": 10
+      },
+      {
+        "seatType": "Diamond",
+        "seatNumber": 11
+      },
+      {
+        "seatType": "Diamond",
+        "seatNumber": 12
+      }
+    ],
+    "totalAmount": 450,
+    "convenienceFee": 85,
+    "totalPayable": 535
+  },
+
+  {
+    "name": "Emma",
+    "age": 32,
+    "email": "emma@example.com",
+    "noOfSeats": 2,
+    "theatreName": "AMC Theatres",
+    "bookingDate": "October 15, 2021",
+    "timeSlot": "3:00 PM - 5:00 PM",
+    "movieTitle": "Inception",
+    "seats": {
+      "seatType": "Gold",
+      "seatNumber": 7
+    },
+    "totalAmount": 300,
+    "convenienceFees": 60,
+    "totalPayable": 360
+  },
+
+  {
+    "name": "James",
+    "age": 27,
+    "email": "james@example.com",
+    "noOfSeats": 4,
+    "theatreName": "Regal Cinemas",
+    "bookingDate": "October 16, 2021",
+    "timeSlot": "7:00 PM - 9:00 PM",
+    "movieTitle": "The Dark Knight",
+    "seats": {
+      "seatType": "Silver",
+      "seatNumber": 12
+    },
+    "totalAmount": 400,
+    "convenienceFees": 70,
+    "totalPayable": 470
+  }
+]

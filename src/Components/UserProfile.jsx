@@ -7,7 +7,7 @@ function UserProfile() {
   return (
     <div>
       <Header/>
-      <Profile user={userData[0]} /> {/* Pass userData as prop */}
+      <Profile user={userData[1]} /> {/* Pass userData as prop */}
     </div>
   );
 }
