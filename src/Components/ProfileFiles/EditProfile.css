@@ -1,0 +1,66 @@
+h2 {
+  text-align: center;
+}
+
+.edit-profile-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-profile-form {
+  border-radius: 1rem;
+  background-color: wheat;
+  margin: 2rem;
+  padding: 2rem;
+  color: black;
+}
+
+.edit-profile-form label {
+  font-weight: bold;
+  color: black;
+  width: 10rem;
+  padding: 2rem;
+}
+
+.edit-profile-form input {
+  border-radius: 0.5rem;
+  border: none;
+  height: 1rem;
+  padding: 0.5rem;
+  font-size: medium;
+}
+
+.edit-profile-form select {
+  border-radius: 0.5rem;
+  border: none;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.edit-profile-form-btn {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-profile-form-button {
+  border-radius: 0.3rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 4rem;
+}
+.edit-profile-form-button:hover {
+  background-color: black;
+  color: white;
+}

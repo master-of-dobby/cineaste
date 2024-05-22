@@ -49,7 +49,21 @@
 }
 
 .book-proceed-btn:hover {
-    background-color: black;
-    color: wheat;
-    font-weight: bold;
+  background-color: black;
+  color: wheat;
+  font-weight: bold;
+}
+
+.get-pass-btn {
+  padding: 0.5rem;
+  cursor: pointer;
+  /* margin: 0.5rem; */
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.get-pass-btn:hover{
+  background-color: lightgrey;
 }

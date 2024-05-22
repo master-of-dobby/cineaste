@@ -1,42 +1,36 @@
 import React, { useEffect, useState } from "react";
 import Header from "./HomePageFiles/Header";
-// import moviesData from "../Collection/moviesData.json";
-import "./HomePageFiles/LatestMovies";
 import { useNavigate } from "react-router-dom";
-// import axios from "axios";
-import MovieDetailsData from "../Collection/MovieDetailsData.json";
+import axios from "axios";
+import "./HomePageFiles/LatestMovies";
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);
-  // const [error, setError] = useState(null); // Track API errors
+  const [error, setError] = useState(null); // Track API errors
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:8080/movies");
-  //     setMovies(response.data);
-  //     console.log(movies);
-  //   } catch (err) {
-  //     setError(err); // Store error for handling
-  //     console.error("Error fetching movies:", err);
-  //   }
-  // };
-  // fetchData();
-  // // }, [movies]);
-
   useEffect(() => {
-    setMovies(MovieDetailsData);
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/movies");
+        setMovies(response.data);
+        console.log(response.data); // Log the response data
+      } catch (err) {
+        setError(err); // Store error for handling
+        console.error("Error fetching movies:", err);
+      }
+    };
+    fetchData();
+  }, []); // Empty dependency array to ensure this runs only once
 
   const bookTicket = (movieId) => {
     console.log(movieId + " is calling");
     navigate(`movie-detail/${movieId}`);
   };
 
-  // if (error) {
-  //   return <div>Error: {error.message}</div>; // Display error message
-  // }
+  if (error) {
+    return <div>Error: {error.message}</div>; // Display error message
+  }
 
   if (!movies) {
     return <div>Loading movies...</div>; // Display loading state

@@ -9,7 +9,7 @@
     "timeSlot": "11:00 AM - 1:00 PM",
     "movieTitle": "Interstellar",
     "isPassHolder": true,
-    "showPrice" : 150,
+    "showPrice": 150,
     "pass": {
       "passType": "golden",
       "moviesLeft": 4
@@ -38,18 +38,35 @@
     "name": "Emma",
     "age": 32,
     "email": "emma@example.com",
-    "noOfSeats": 2,
+    "noOfSeats": 3,
     "theatreName": "AMC Theatres",
     "bookingDate": "October 15, 2021",
     "timeSlot": "3:00 PM - 5:00 PM",
     "movieTitle": "Inception",
-    "seats": {
-      "seatType": "Gold",
-      "seatNumber": 7
+    "isPassHolder": false,
+    "showPrice": 150,
+    "pass": {
+      "passType": "golden",
+      "moviesLeft": 4
     },
-    "totalAmount": 300,
-    "convenienceFees": 60,
-    "totalPayable": 360
+
+    "seats": [
+      {
+        "seatType": "Platinum",
+        "seatNumber": 6
+      },
+      {
+        "seatType": "Platinum",
+        "seatNumber": 7
+      },
+      {
+        "seatType": "Platinum",
+        "seatNumber": 11
+      }
+    ],
+    "totalAmount": 450,
+    "convenienceFee": 85,
+    "totalPayable": 535
   },
 
   {
@@ -60,13 +77,33 @@
     "theatreName": "Regal Cinemas",
     "bookingDate": "October 16, 2021",
     "timeSlot": "7:00 PM - 9:00 PM",
-    "movieTitle": "The Dark Knight",
-    "seats": {
-      "seatType": "Silver",
-      "seatNumber": 12
+    "isPassHolder": true,
+    "showPrice": 150,
+    "pass": {
+      "passType": "golden",
+      "moviesLeft": 4
     },
-    "totalAmount": 400,
-    "convenienceFees": 70,
-    "totalPayable": 470
+
+    "seats": [
+      {
+        "seatType": "Diamond",
+        "seatNumber": 10
+      },
+      {
+        "seatType": "Diamond",
+        "seatNumber": 11
+      },
+      {
+        "seatType": "Diamond",
+        "seatNumber": 12
+      },
+      {
+        "seatType": "Diamond",
+        "seatNumber": 13
+      }
+    ],
+    "totalAmount": 600,
+    "convenienceFee": 108,
+    "totalPayable": 708
   }
 ]

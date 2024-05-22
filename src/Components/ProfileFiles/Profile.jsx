@@ -1,9 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import profileImage from "../../Assets/user_icon.png";
 import "./Profile.css";
 
 const Profile = ({ user }) => {
+  const navigate = useNavigate();
+
+  const handleEditProfile = (user) => {
+    navigate(`/edit-profile/${user.id}`);
+  };
+
   return (
     <div className="profile-container">
       <div className="profile-card">
@@ -58,9 +64,14 @@ const Profile = ({ user }) => {
           </div>
         )}
         <div className="profile-buttons">
-          <Link to="/edit-profile">
-            <button className="edit-profile-btn">Edit Profile</button>
-          </Link>
+          {/* <Link to="/edit-profile/:user-id"> */}
+            <button
+              className="edit-profile-btn"
+              onClick={() => handleEditProfile(user)}
+            >
+              Edit Profile
+            </button>
+          {/* </Link> */}
           <button className="logout-btn">Logout</button>
         </div>
       </div>

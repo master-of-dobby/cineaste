@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./AddMovie.css";
+import axios from "axios";
 
 function AddMovie() {
   const [formData, setFormData] = useState({
     id: "",
     name: "",
-    genre: "",
+    genre: [],
     language: "",
     rating: "",
     releaseDate: "",
@@ -17,18 +18,40 @@ function AddMovie() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    if (name === "genre") {
+      const selectedGenres = value.split(",").map((item) => item.trim());
+
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: selectedGenres,
+      }));
+    } else {
+      // For other fields, just update the state with the new value
+      setFormData((prevState) => ({ ...prevState, [name]: value }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission
+
     console.log(formData);
+
+    try {
+      const respone = await axios.post("http://localhost:8080/movie", formData);
+      console.log(respone);
+    } catch (err) {
+      console.error(err);
+      <p>Error occured in adding...</p>;
+    } finally {
+      console.log("Done");
+    }
+
     // Reset form data
     setFormData({
       id: "",
       name: "",
-      genre: "",
+      genre: [],
       language: "",
       rating: "",
       releaseDate: "",
@@ -64,8 +87,9 @@ function AddMovie() {
               className="form-control"
               id="genre"
               name="genre"
-              value={formData.genre}
+              value={formData.genre.join(", ")}
               onChange={handleChange}
+              placeholder="Enter Genre seperated by Comma ' , ' "
               required
             />
           </div>

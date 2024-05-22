@@ -13,7 +13,9 @@ import MovieDetail from "./Components/MovieDetail";
 import TheatreList from "./Components/TheatreList";
 import AddMovie from "./Components/AddMovies/AddMovie";
 import AddTheater from "./Components/AddTheatres/AddTheatre";
-import BookingSummary from "./Components/BookingSummary";
+import BookingSummary from "./Components/BookingSummary/BookingSummary";
+import BuyPass from "./Components/BuyPass";
+import EditProfile from "./Components/ProfileFiles/EditProfile";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
             path="/booking-summary/:showId/:showTime"
             Component={BookingSummary}
           ></Route>
+          <Route path="buy-pass" Component={BuyPass}></Route>
+          <Route path="edit-profile/:userId" Component={EditProfile}></Route>
         </Routes>
       </Router>
     </>

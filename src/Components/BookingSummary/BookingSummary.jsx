@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import data from "../Collection/BookSummaryData.json";
+import data from "../../Collection/BookSummaryData.json";
 import { useNavigate } from "react-router-dom";
 import "./BookingSummary.css";
 
@@ -9,7 +9,7 @@ function BookingSummary() {
 
   useEffect(() => {
     if (!bookingData && data.length > 0) {
-      setBookingData(data[0]);
+      setBookingData(data[2]);
     }
   }, [bookingData]);
 
@@ -28,7 +28,9 @@ function BookingSummary() {
       ) {
         return baseAmount;
       } else {
-        return baseAmount - bookingData.showPrice;
+        return (
+          baseAmount - bookingData.showPrice - bookingData.showPrice * 0.18
+        );
       }
     } else {
       return baseAmount;
@@ -36,7 +38,7 @@ function BookingSummary() {
   }
 
   function getPass() {
-    if (!bookingData.isPassHolder) navigate("/get-pass");
+    if (!bookingData.isPassHolder) navigate("/buy-pass");
   }
 
   return (
@@ -44,7 +46,7 @@ function BookingSummary() {
       <div className="booking-summary">
         <h1>Booking Summary</h1>
         <div className="booking-summary-seat-details">
-          <p style={{fontWeight: "bold"}}>{bookingData.movieTitle}</p>
+          <p style={{ fontWeight: "bold" }}>{bookingData.movieTitle}</p>
           <p>
             {bookingData.theatreName} {bookingData.bookingDate}{" "}
             {bookingData.timeSlot}
@@ -75,9 +77,28 @@ function BookingSummary() {
           <div className="pass-discount">
             <p>
               Pass Holder :{" "}
-              {bookingData.isPassHolder ? "Yaaay!Yess" : "Get a one dude!"}{" "}
+              {bookingData.isPassHolder ? (
+                <span>
+                  "Yaaay!Yess"
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <b>-{bookingData.showPrice + bookingData.showPrice * 0.18}</b>
+                </span>
+              ) : (
+                "Get a one dude!"
+              )}{" "}
               {bookingData.isPassHolder ? null : (
-                <button onClick={getPass}>Get One</button>
+                <button
+                  onClick={getPass}
+                  className="get-pass-btn"
+                  // style={
+                  //   ({ border: "none" },
+                  //   { height: "2rem" },
+                  //   { borderRadius: "2rem" },
+                  //   { border: "none" })
+                  // }
+                >
+                  Get it!
+                </button>
               )}
             </p>
           </div>

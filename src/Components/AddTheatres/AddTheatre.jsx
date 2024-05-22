@@ -1,60 +1,88 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AddTheatre.css";
+import axios from "axios";
 
 function AddTheater() {
+  const [moviesList, setMoviesList] = useState([]);
+  const [selectedMovieId, setSelectedMovieId] = useState(null);
   const [formData, setFormData] = useState({
     theatreName: "",
-    movieName: "",
     location: "",
-    amenities: "",
-    capacity: {
-      gold: "",
-      diamond: "",
-      platinum: ""
-    }
+    amenities: [],
+    goldCapacity: "",
+    diamondCapacity: "",
+    platinumCapacity: "",
   });
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/movies");
+        setMoviesList(response.data);
+      } catch (err) {
+        console.log("Movies NOT FOUND!" + err);
+      }
+    };
+
+    fetchMovies();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (name === "capacityType") {
-      const capacityType = value;
-      setFormData({
-        ...formData,
-        capacity: {
-          ...formData.capacity,
-          [capacityType]: ""
-        }
-      });
-    } else if (name.includes("capacity")) {
-      const capacityType = name.split("-")[1];
-      setFormData({
-        ...formData,
-        capacity: {
-          ...formData.capacity,
-          [capacityType]: value
-        }
-      });
+    if (name === "amenities") {
+      const selectedAmenities = value.split(",").map((item) => item.trim());
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: selectedAmenities,
+      }));
     } else {
-      setFormData({ ...formData, [name]: value });
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleMovieChange = (e) => {
+    setSelectedMovieId(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-    // Reset form data
-    setFormData({
-      theatreName: "",
-      movieName: "",
-      location: "",
-      amenities: "",
-      capacity: {
-        gold: "",
-        diamond: "",
-        platinum: ""
-      }
-    });
+
+    const dataToSubmit = {
+      name: formData.theatreName,
+      location: formData.location,
+      amenities: formData.amenities,
+      goldCapacity: parseInt(formData.goldCapacity, 10),
+      diamondCapacity: parseInt(formData.diamondCapacity, 10),
+      platinumCapacity: parseInt(formData.platinumCapacity, 10),
+      capacity:
+        parseInt(formData.goldCapacity, 10) +
+        parseInt(formData.diamondCapacity, 10) +
+        parseInt(formData.platinumCapacity, 10),
+      movie: { id: selectedMovieId },
+    };
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/theatre",
+        dataToSubmit
+      );
+      console.log(response);
+      // Reset form data after successful submission
+      setFormData({
+        theatreName: "",
+        location: "",
+        amenities: [],
+        goldCapacity: "",
+        diamondCapacity: "",
+        platinumCapacity: "",
+      });
+      setSelectedMovieId(null);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -77,15 +105,20 @@ function AddTheater() {
 
           <div className="form-group">
             <label htmlFor="movieName">Movie Name:</label>
-            <input
-              type="text"
+            <br />
+            <select
+              onChange={handleMovieChange}
               className="form-control"
-              id="movieName"
-              name="movieName"
-              value={formData.movieName}
-              onChange={handleChange}
+              value={selectedMovieId || ""}
               required
-            />
+            >
+              <option value="">Select a movie...</option>
+              {moviesList.map((movie) => (
+                <option key={movie.id} value={movie.id}>
+                  {movie.name}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className="form-group">
@@ -103,54 +136,55 @@ function AddTheater() {
 
           <div className="form-group">
             <label htmlFor="amenities">Amenities:</label>
-            <select
+            <input
+              type="text"
               className="form-control"
               id="amenities"
               name="amenities"
-              value={formData.amenities}
+              value={formData.amenities.join(", ")}
               onChange={handleChange}
+              placeholder="Enter amenities separated by commas"
               required
-            >
-              <option value="">Select Amenities</option>
-              <option value="AC DOLBY">AC DOLBY</option>
-              <option value="AC DOLBY 8DX">AC DOLBY 8DX</option>
-            </select>
+            />
           </div>
 
           <div className="form-group">
-            <label htmlFor="capacity">Capacity:</label>
-            <div className="capacity-group">
-              <input
-                type="number"
-                className="form-control"
-                id="gold-capacity"
-                name="capacity-gold"
-                value={formData.capacity.gold}
-                onChange={handleChange}
-                placeholder="Gold Capacity"
-                required
-              />
-              <input
-                type="number"
-                className="form-control"
-                id="diamond-capacity"
-                name="capacity-diamond"
-                value={formData.capacity.diamond}
-                onChange={handleChange}
-                placeholder="Diamond Capacity"
-                required
-              />
-              <input
-                type="number"
-                className="form-control"
-                id="platinum-capacity"
-                name="capacity-platinum"
-                value={formData.capacity.platinum}
-                onChange={handleChange}
-                placeholder="Platinum Capacity"
-                required
-              />
-            </div>
+            <label htmlFor="goldCapacity">Gold Capacity:</label>
+            <input
+              type="number"
+              className="form-control"
+              id="goldCapacity"
+              name="goldCapacity"
+              value={formData.goldCapacity}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="diamondCapacity">Diamond Capacity:</label>
+            <input
+              type="number"
+              className="form-control"
+              id="diamondCapacity"
+              name="diamondCapacity"
+              value={formData.diamondCapacity}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="platinumCapacity">Platinum Capacity:</label>
+            <input
+              type="number"
+              className="form-control"
+              id="platinumCapacity"
+              name="platinumCapacity"
+              value={formData.platinumCapacity}
+              onChange={handleChange}
+              required
+            />
           </div>
 
           <button type="submit" className="btn btn-primary">

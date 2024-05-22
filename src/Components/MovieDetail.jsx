@@ -1,73 +1,79 @@
 import React, { useEffect, useState } from "react";
 import Header from "./HomePageFiles/Header";
-// import axios from "axios";
+import axios from "axios";
 import "./Styles/MovieDetail.css";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import MovieDetailsData from "../Collection/MovieDetailsData.json";
+// import MovieDetailsData from "../Collection/MovieDetailsData.json";
 
 function MovieDetail() {
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
-  const movieId = useParams();
 
-  // const [error, setError] = useState(null);
-  // const [loading, setLoading] = useState(true);
-  // const { movieId } = useParams();
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const { movieId } = useParams();
+
+  useEffect(() => {
+    // console.log(movieId + "is Id");
+    let isMounted = true; // Flag to track if component is mounted
+
+    const fetchMovie = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8080/movie/${movieId}`
+        );
+        if (isMounted) {
+          // Check if component is still mounted before updating state
+          setMovie(response.data);
+        }
+      } catch (err) {
+        if (isMounted) {
+          // Check if component is still mounted before updating state
+          setError(err);
+        }
+      } finally {
+        if (isMounted) {
+          // Check if component is still mounted before updating state
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchMovie();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [movieId]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   // useEffect(() => {
-  //   // console.log(movieId + "is Id");
-  //   let isMounted = true; // Flag to track if component is mounted
-
-  //   const fetchMovie = async () => {
+  //   const fetchData = async () => {
   //     try {
-  //       const response = await axios.get(
-  //         `http://localhost:8080/movie/${movieId}`
-  //       );
-  //       if (isMounted) {
-  //         // Check if component is still mounted before updating state
-  //         setMovie(response.data);
-  //       }
+  //       const response = await fetch("http://localhost:8080/movie");
+  //       console.log(response);
+  //       setMovie(response.data);
   //     } catch (err) {
-  //       if (isMounted) {
-  //         // Check if component is still mounted before updating state
-  //         setError(err);
-  //       }
-  //     } finally {
-  //       if (isMounted) {
-  //         // Check if component is still mounted before updating state
-  //         setLoading(false);
-  //       }
+  //       console.log("MOVIE DETAILS NOT FOUND ! " + err);
   //     }
   //   };
 
-  //   fetchMovie();
-
-  //   return () => {
-  //     isMounted = false;
-  //   };
-  // }, [movieId]);
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (error) {
-  //   return <div>Error: {error.message}</div>;
-  // }
+  //   fetchData();
+  // }, []);
 
   // useEffect(() => {
-  // const fetchData = async () => {
-  //   try{
-  //     const response = await fetch("./")
-  //   }
-  // }
-
-  useEffect(() => {
-    const response = MovieDetailsData.find((m) => m.id === parseInt(movieId.movieId))
-    // console.log(response +  ' is response');
-    setMovie(response);
-  }, [movieId.movieId]);
+  //   const response = .find((m) => m.id === parseInt(movieId.movieId))
+  //   // console.log(response +  ' is response');
+  //   setMovie(response);
+  // }, [movieId.movieId]);
   // console.log(movie + " det");
   // }, []);
 
