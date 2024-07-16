@@ -1,0 +1,45 @@
+.add-show-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-show {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem;
+  background-color: rgb(239, 207, 147);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.add-show .add-show-form {
+  margin: 2rem;
+}
+
+.add-show input {
+  margin: 1rem;
+  height: 2rem;
+  width: 15rem;
+}
+
+.add-show label {
+  color: black;
+}
+
+.add-show .add-show-form button {
+  margin: 0.5rem;
+  background-color: blanchedalmond;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.6rem;
+  width: 7rem;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 7.5rem;
+}

@@ -1,0 +1,69 @@
+.select-tickets {
+  display: flex;
+  flex-direction: row;
+}
+
+.theatre-section-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 3;
+}
+
+.theatre-section-layout__header-subtitle {
+  margin-bottom: 20px;
+}
+
+.seats {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.seat-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.plat-theatre-seats,
+.dia-theatre-seats,
+.gold-theatre-seats {
+  background-color: lightgray; /* or your preferred color */
+  margin: 0.1rem;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: small;
+  border: 0.1rem solid black;
+}
+
+.diamond-seats .dia-theatre-seats {
+  background-color: lightblue; /* or your preferred color */
+}
+
+.gold-seats .gold-theatre-seats {
+  background-color: lightgoldenrodyellow; /* or your preferred color */
+}
+
+.selected-tickets {
+  margin: 2rem; 
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-tickets-box {
+  /* border: 1px solid #ccc; */
+  border-radius: 0.3rem;
+  /* padding: 10px; */
+  width: 30rem;
+  height: 30rem;  
+  text-align: center;
+  background-color: wheat;
+}

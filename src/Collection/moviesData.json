@@ -1,18 +1,18 @@
 [
   {
-    "id":1,
+    "id": 1,
     "title": "Hanu-Man",
     "image": "https://image.tmdb.org/t/p/original/aMpUiVX45dHD9XNsvDCEi0i4vrO.jpg",
     "genre": "Action/Adventure/Fantasy"
   },
   {
-    "id":2,
+    "id": 2,
     "title": "The Family Star",
     "image": "https://image.tmdb.org/t/p/original/wcPPVnioL7vbeAuplDhq6PEkRPq.jpg",
     "genre": "Action/Comedy/Family"
   },
   {
-    "id":3,
+    "id": 3,
     "title": "Tillu Sqaure",
     "image": "https://image.tmdb.org/t/p/original/bdzi5up1CnAyeAyptLoIq5HiHJn.jpg",
     "genre": "Action/Comedy/Romantic"

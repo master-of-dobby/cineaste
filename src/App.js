@@ -16,6 +16,9 @@ import AddTheater from "./Components/AddTheatres/AddTheatre";
 import BookingSummary from "./Components/BookingSummary/BookingSummary";
 import BuyPass from "./Components/BuyPass";
 import EditProfile from "./Components/ProfileFiles/EditProfile";
+import TheatreLayout from "./Components/TheatreLayout";
+import AddShow from "./Components/AddShow";
+import ShowTheatres from "./Components/ShowTheatres";
 
 function App() {
   return (
@@ -42,6 +45,12 @@ function App() {
           ></Route>
           <Route path="buy-pass" Component={BuyPass}></Route>
           <Route path="edit-profile/:userId" Component={EditProfile}></Route>
+          <Route
+            path="/theatres-list/:movieId/select-tickets/:theatreId/:showId"
+            Component={TheatreLayout}
+          ></Route>
+          <Route path="/add-show/:theatreId" Component={AddShow}></Route>
+          <Route path="/show-theaters" Component={ShowTheatres}></Route>
         </Routes>
       </Router>
     </>

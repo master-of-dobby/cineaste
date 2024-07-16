@@ -1,37 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./Styles/TheatreShows.css";
 
-function TheatreShows(props) {
+function TheatreShows({ theatre, movieId }) {
+  const [shows, setShows] = useState([]);
   const navigate = useNavigate();
 
-  // const bookTicket = (id, time) => {
-  //   navigate(`/booking-summary/${id}/${time}`);
-  // };
+  useEffect(() => {
+    const fetchShows = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8080/shows/theatre/${theatre.id}/movie/${movieId}`
+        );
+        setShows(response.data);
+      } catch (err) {
+        console.log("Error fetching shows:", err);
+      }
+    };
+
+    fetchShows();
+  }, [theatre.id, movieId]);
+
+  const handleShowClick = (showId) => {
+    navigate(
+      `/theatres-list/${movieId}/select-tickets/${theatre.id}/${showId}`
+    );
+  };
 
   return (
-    <div className="theatre-list-details">
-      <div className="theatre-list-det">
-        {console.log(props.theatre)}
-        {props.theatre.name} {props.theatre.amenities.join(" ")} :{" "}
-        {props.theatre.location}
-        <p style={{ fontSize: "17px" }}>Non Cancellable</p>
-      </div>
+    <>
+ 
       <div className="theatre-list-showtimes">
         <div className="showtimes">
-          {/* {props.theatre.showTime.map((show) => (
-            
-          ))} */}
-          <button
-            // onClick={() => bookTicket(show.id, show.time)}
-            className="showtime-btn"
-            // key={show.id}
-          >
-            Book Ticket
-            {/* {show.time} */}
-          </button>
+          {shows.map((show) => (
+            <button
+              key={show.id}
+              className="showtime-btn"
+              onClick={() => handleShowClick(show.id)}
+            >
+              {new Date(show.showTime).toLocaleString()}
+            </button>
+          ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

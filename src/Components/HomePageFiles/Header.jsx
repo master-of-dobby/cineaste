@@ -29,6 +29,9 @@ function Header() {
           <Link to="/bookings" className="nav-link">
             My Bookings
           </Link>
+          <Link to="/show-theaters" className="nav-link">
+            Add Shows
+          </Link>
           <Link to="/profile" className="nav-link">
             Profile
           </Link>

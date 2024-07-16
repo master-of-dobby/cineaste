@@ -1,0 +1,26 @@
+.theatre-list-showtimes {
+    margin: 2rem 0;
+  }
+  
+  .showtimes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .showtime-btn {
+    margin: 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #ff6347; /* Tomato Red */
+    color: white; /* White text color for contrast */
+    transition: background-color 0.3s ease;
+  }
+  
+  .showtime-btn:hover {
+    background-color: #225244; /* Darker shade of green on hover */
+  }
+  
