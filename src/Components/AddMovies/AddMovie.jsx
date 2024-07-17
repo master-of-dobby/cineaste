@@ -13,7 +13,7 @@ function AddMovie() {
     trailerUrl: "",
     imageUrl: "",
     description: "",
-    location: "",
+    // location: "",
   });
 
   const handleChange = (e) => {
@@ -58,7 +58,7 @@ function AddMovie() {
       trailerUrl: "",
       imageUrl: "",
       description: "",
-      location: "",
+      // location: "",
     });
   };
 
@@ -174,7 +174,7 @@ function AddMovie() {
             ></textarea>
           </div>
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="location">Location:</label>
             <input
               type="text"
@@ -185,7 +185,7 @@ function AddMovie() {
               onChange={handleChange}
               required
             />
-          </div>
+          </div> */}
 
           <button type="submit" className="btn btn-primary">
             Submit

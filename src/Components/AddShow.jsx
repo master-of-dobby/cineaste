@@ -17,7 +17,6 @@ function AddShow() {
           `http://localhost:8080/theatre/${theatreId}`
         );
         setTheatre(response.data);
-        // console.log(response.data);
       } catch (err) {
         console.log("Error in fetching theatre: " + err);
       }
@@ -32,7 +31,9 @@ function AddShow() {
   };
 
   const addShow = async () => {
-    const dateTime = `${date}T${time}:00`;
+    // Combine date and time into the desired format
+    const dateTime = new Date(`${date}T${time}:00.000+05:30`).toISOString();
+
     console.log(dateTime);
 
     const payload = {
@@ -42,20 +43,19 @@ function AddShow() {
       movie: {
         id: theatre.movie.id,
       },
-      // showTime: "2024-07-14T19:43:07.930+05:30",
       showTime: dateTime,
       platinumRemaining: theatre.platinumCapacity,
       diamondRemaining: theatre.diamondCapacity,
       goldRemaining: theatre.goldCapacity,
       eligibleAge: 11,
-      // isAvailable: 0xx1,
     };
-
-    // console.log(payload);
 
     try {
       const response = await axios.post(`http://localhost:8080/show`, payload);
       console.log(response.data);
+      window.alert("Show added successfully");
+      setDate("");
+      setTime("");
     } catch (err) {
       console.log("Error in adding show " + err);
     }

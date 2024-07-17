@@ -1,3 +1,22 @@
+.plat-theatre-seats.booked,
+.dia-theatre-seats.booked,
+.gold-theatre-seats.booked {
+  /* background-color: red; Change this to whatever color you prefer for booked seats */
+  /* pointer-events: none; */
+  /* cursor: not-allowed; */
+  font-weight: bold;
+  color: red;
+  background-color: black !important;
+}
+
+.plat-theatre-seats.selected,
+.dia-theatre-seats.selected,
+.gold-theatre-seats.selected {
+  background-color: darkred !important;
+  font-weight: bold;
+  color: white;
+}
+
 .select-tickets {
   display: flex;
   flex-direction: row;
@@ -34,7 +53,7 @@
 .gold-theatre-seats {
   background-color: lightgray; /* or your preferred color */
   margin: 0.1rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 0.4rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -51,7 +70,7 @@
 }
 
 .selected-tickets {
-  margin: 2rem; 
+  margin: 2rem;
   flex: 1;
   flex-direction: row;
   align-items: center;
@@ -60,10 +79,81 @@
 
 .selected-tickets-box {
   /* border: 1px solid #ccc; */
-  border-radius: 0.3rem;
-  /* padding: 10px; */
-  width: 30rem;
-  height: 30rem;  
+  border-radius: 0.8rem;
+  padding: 1rem;
+  width: 25rem;
+  /* height: 30rem; */
+  height: 30rem;
   text-align: center;
   background-color: wheat;
+  box-shadow: 1rem 1rem 1rem 1rem #636363;
+}
+
+.selected-tickets-box h2 {
+  color: brown;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem brown;
+}
+
+.selected-seat-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.price-details {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.price-details div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.3rem;
+}
+
+.selected-seat-numbers {
+  margin: 1rem;
+}
+
+.selected-ticket-count {
+  margin: 1rem;
+}
+
+.isPassHolder {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.isPassHolder button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  height: 2rem;
+  cursor: pointer;
+  font-style: italic;
+}
+
+.payable-amount-btn-div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  padding: 2rem;
+}
+
+.payable-amount-btn {
+  color: white;
+  background-color: brown;
+  border-radius: 0.5rem;
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  font-weight:500;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
