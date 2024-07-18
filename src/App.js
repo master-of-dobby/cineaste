@@ -19,6 +19,7 @@ import EditProfile from "./Components/ProfileFiles/EditProfile";
 import TheatreLayout from "./Components/TheatreLayout";
 import AddShow from "./Components/AddShow";
 import ShowTheatres from "./Components/ShowTheatres";
+import BookingPage from "./Components/BookingPage";
 
 function App() {
   return (
@@ -46,11 +47,12 @@ function App() {
           <Route path="buy-pass" Component={BuyPass}></Route>
           <Route path="edit-profile/:userId" Component={EditProfile}></Route>
           <Route
-            path="/theatres-list/:movieId/select-tickets/:theatreId/:showId"
+            path="/theatres-list/:movieId/select-tickets/:theatreId/show/:showId/time/:showTime"
             Component={TheatreLayout}
           ></Route>
           <Route path="/add-show/:theatreId" Component={AddShow}></Route>
           <Route path="/show-theaters" Component={ShowTheatres}></Route>
+          <Route path="/amount/:payableAmount/hasPass/:hasPass" Component={BookingPage}></Route>
         </Routes>
       </Router>
     </>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "./Styles/TheatreLayout.css";
 import userData from "../Collection/userData.json";
+import Header from "./HomePageFiles/Header";
 
 function TheaterLayout() {
   const [theatreDetails, setTheatreDetails] = useState({});
@@ -18,6 +19,7 @@ function TheaterLayout() {
   const [selectedCount, setSelectedCount] = useState(0);
 
   const { showId } = useParams();
+  const { showTime } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -89,14 +91,14 @@ function TheaterLayout() {
     let end = Math.floor(platCapacity / 15);
     end = platCapacity % 15 > 0 ? ++end : end;
     // end++;
-    console.log(start + " " + end);
+    // console.log(start + " " + end);
     const platSeats = seatRows.slice(start, end);
     start = end;
     end = end + Math.floor(diaCapacity / 15);
     end = diaCapacity % 15 > 0 ? ++end : end;
     // end++;
 
-    console.log(start + " " + end);
+    // console.log(start + " " + end);
 
     const diaSeats = seatRows.slice(start, end);
     start = end;
@@ -104,7 +106,7 @@ function TheaterLayout() {
     end = goldCapacity % 15 > 0 ? ++end : end;
     // end++;
 
-    console.log(start + " " + end);
+    // console.log(start + " " + end);
     const goldSeats = seatRows.slice(start, end);
 
     setPlatinumSeats(platSeats);
@@ -253,161 +255,210 @@ function TheaterLayout() {
 
   const [passDeduction, setPassDeduction] = useState(0.0);
 
-  const onClickToPay = () => {
+  const onClickToPay = (amountToPay) => {
     console.log("Successfully Paid");
-    window.location.reload();
+    navigate(`/amount/${amountToPay}/hasPass/${isPassHolder}`);
+    // window.location.reload();
   };
+
+  const [showDateTime, setShowDateTime] = useState();
+
+  useEffect(() => {
+    const timeStamp = parseInt(showTime);
+    const dateTime = new Date(timeStamp);
+
+    setShowDateTime(() => dateTime.toLocaleString());
+  }, []);
 
   return (
     <>
-      <div className="select-tickets">
-        <div className="theatre-section-layout">
-          <div className="theatre-section-layout__header-subtitle">
-            Select your seats for the show - <b>{theatreDetails.name}</b>
-          </div>
-
-          <div className="platinum-seats">
-            {platinumSeats.map((row, rowIndex) => (
-              <div className="seat-row" key={`plat-row-${rowIndex}`}>
-                {row.map((seat, seatIndex) => (
-                  <div
-                    className={`plat-theatre-seats ${
-                      bookedSeats.includes(seat) ? "booked" : ""
-                    }`}
-                    key={`plat-${seatIndex}`}
-                    id={seat}
-                    onClick={() => handleSeatSelection(seat, "platinum")}
-                  >
-                    {seat}
-                  </div>
-                ))}
+      <div className="select-tickets-whole">
+        <Header></Header>
+        <div className="select-tickets">
+          <div className="theatre-section-layout">
+            <div className="theatre-section-layout__header-subtitle">
+              <div
+                style={{
+                  fontFamily: "cursive",
+                  fontWeight: "600",
+                  fontStyle: "italic",
+                }}
+              >
+                select your seats for the show
               </div>
-            ))}
-          </div>
-          <div className="diamond-seats">
-            {diamondSeats.map((row, rowIndex) => (
-              <div className="seat-row" key={`dia-row-${rowIndex}`}>
-                {row.map((seat, seatIndex) => (
-                  <div
-                    className={`dia-theatre-seats ${
-                      bookedSeats.includes(seat) ? "booked" : ""
-                    }`}
-                    key={`dia-${seatIndex}`}
-                    id={seat}
-                    onClick={() => handleSeatSelection(seat, "diamond")}
-                  >
-                    {seat}
-                  </div>
-                ))}
+              <div style={{ fontSize: "larger" }}>
+                <b>{theatreDetails.name} </b>{" "}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {showDateTime}
               </div>
-            ))}
-          </div>
-          <div className="gold-seats">
-            {goldSeats.map((row, rowIndex) => (
-              <div className="seat-row" key={`gold-row-${rowIndex}`}>
-                {row.map((seat, seatIndex) => (
-                  <div
-                    className={`gold-theatre-seats ${
-                      bookedSeats.includes(seat) ? "booked" : ""
-                    }`}
-                    key={`gold-${seatIndex}`}
-                    id={seat}
-                    onClick={() => handleSeatSelection(seat, "gold")}
-                  >
-                    {seat}
-                  </div>
-                ))}
+            </div>
+            <div className="seat-info">
+              <div className="booked">
+                <div className="booked-box">XX</div>
+                <p>Booked</p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="selected-tickets">
-          <div className="selected-tickets-box">
-            <h2>Selected Tickets</h2>
-            <p
-              style={{
-                fontStyle: "italic",
-                fontFamily: "sans-serif",
-                fontSize: "0.7rem",
-              }}
-            >
-              ( * choose your ticket first to get maximum avail of discount on
-              pass holder )
-            </p>
-            <div className="selected-seat-numbers">
-              {selectedSeats.map((seat, index) => (
-                <>
-                  <div key={index}> {seat} </div>
-                  {index < 5 ? <div>,</div> : null}
-                </>
+              {/* <div className="available">
+                <div className="available-box">XX</div>
+                <p>Available</p>
+              </div> */}
+            </div>
+            <hr style={{ color: "black", height: "0.1rem", width:"90%", boxShadow:"1px 1px black", marginTop:"0.3rem", marginBottom:"0.9rem" }}></hr>
+            <div className="platinum-seats">
+              {platinumSeats.map((row, rowIndex) => (
+                <div className="seat-row" key={`plat-row-${rowIndex}`}>
+                  {row.map((seat, seatIndex) => (
+                    <div
+                      className={`plat-theatre-seats ${
+                        bookedSeats.includes(seat) ? "booked" : ""
+                      }`}
+                      key={`plat-${seatIndex}`}
+                      id={seat}
+                      onClick={() => handleSeatSelection(seat, "platinum")}
+                    >
+                      {seat}
+                    </div>
+                  ))}
+                </div>
               ))}
             </div>
-
-            <div className="selected-ticket-count">
-              (<span style={{ fontWeight: "bold" }}>{selectedCount}</span>{" "}
-              tickets)
-            </div>
-
-            <div className="price-details">
-              <div className="selected-total-price">
-                <div>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                <span className="selected-total-price-value">
-                  ₹ {selectedPrice}
-                </span>
-              </div>
-
-              <div className="selected-tax">
-                <div>
-                  Tax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
-                <span className="selected-total-price-value">
-                  ₹ {0.18 * selectedPrice}
-                </span>
-              </div>
-
-              <div className="isPassHolder">
-                <div>
-                  Pass Holder ?
-                  {isPassHolder ? (
-                    <div style={{ fontWeight: "bold" }}>Yaay...Yes :)</div>
-                  ) : (
-                    <div>
-                      No! &nbsp;
-                      <button
-                        className="get-here-pass"
-                        onClick={onClickToBuyPass}
-                      >
-                        GET HERE
-                      </button>
+            <div className="diamond-seats">
+              {diamondSeats.map((row, rowIndex) => (
+                <div className="seat-row" key={`dia-row-${rowIndex}`}>
+                  {row.map((seat, seatIndex) => (
+                    <div
+                      className={`dia-theatre-seats ${
+                        bookedSeats.includes(seat) ? "booked" : ""
+                      }`}
+                      key={`dia-${seatIndex}`}
+                      id={seat}
+                      onClick={() => handleSeatSelection(seat, "diamond")}
+                    >
+                      {seat}
                     </div>
-                  )}
+                  ))}
                 </div>
-                <span className="selected-total-price-value">
-                  - ₹ {passDeduction}
-                </span>
-              </div>
+              ))}
+            </div>
+            <div className="gold-seats">
+              {goldSeats.map((row, rowIndex) => (
+                <div className="seat-row" key={`gold-row-${rowIndex}`}>
+                  {row.map((seat, seatIndex) => (
+                    <div
+                      className={`gold-theatre-seats ${
+                        bookedSeats.includes(seat) ? "booked" : ""
+                      }`}
+                      key={`gold-${seatIndex}`}
+                      id={seat}
+                      onClick={() => handleSeatSelection(seat, "gold")}
+                    >
+                      {seat}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <div class="screen-container">
+              <div class="screen"></div>
+            </div>
+            [all eyes this way please]
+            <br></br>
+            <br></br>
+          </div>
 
-              <hr
+          <div className="selected-tickets">
+            <div className="selected-tickets-box">
+              <h2>Selected Tickets</h2>
+              <p
                 style={{
-                  backgroundColor: "black",
-                  height: "0.1rem",
-                  border: "none",
-                  boxShadow: "0.01rem 0.01rem 0.01rem 0.01rem",
+                  fontStyle: "italic",
+                  fontFamily: "sans-serif",
+                  fontSize: "0.7rem",
                 }}
-              ></hr>
-
-              <div className="sub-total">
-                <div>Sub Total</div>
-                <span className="selected-total-price-value">
-                  ₹ {selectedPrice + 0.18 * selectedPrice}
-                </span>
+              >
+                ( * choose your ticket first to get maximum avail of discount on
+                pass holder )
+              </p>
+              <div className="selected-seat-numbers">
+                {selectedSeats.map((seat, index) => (
+                  <>
+                    <div key={index}> {seat} </div>
+                    {index < 5 ? <div>,</div> : null}
+                  </>
+                ))}
               </div>
 
-              <div className="payable-amount-btn-div">
-                <button className="payable-amount-btn" onClick={onClickToPay}>
-                  ₹ {selectedPrice + 0.18 * selectedPrice}
-                </button>
+              <div className="selected-ticket-count">
+                (<span style={{ fontWeight: "bold" }}>{selectedCount}</span>{" "}
+                tickets)
+              </div>
+
+              <div className="price-details">
+                <div className="selected-total-price">
+                  <div>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <span className="selected-total-price-value">
+                    ₹ {selectedPrice}
+                  </span>
+                </div>
+
+                <div className="selected-tax">
+                  <div>
+                    Tax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+                  <span className="selected-total-price-value">
+                    ₹ {0.18 * selectedPrice}
+                  </span>
+                </div>
+
+                <div className="isPassHolder">
+                  <div>
+                    Pass Holder ?
+                    {isPassHolder ? (
+                      <div style={{ fontWeight: "bold" }}>Yaay...Yes :)</div>
+                    ) : (
+                      <div>
+                        No! &nbsp;
+                        <button
+                          className="get-here-pass"
+                          onClick={onClickToBuyPass}
+                        >
+                          GET HERE
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                  <span className="selected-total-price-value">
+                    - ₹ {passDeduction}
+                  </span>
+                </div>
+
+                <hr
+                  style={{
+                    backgroundColor: "black",
+                    height: "0.1rem",
+                    border: "none",
+                    boxShadow: "0.01rem 0.01rem 0.01rem 0.01rem",
+                  }}
+                ></hr>
+
+                <div className="sub-total">
+                  <div>Sub Total</div>
+                  <span className="selected-total-price-value">
+                    ₹ {selectedPrice + 0.18 * selectedPrice - passDeduction}
+                  </span>
+                </div>
+
+                <div className="payable-amount-btn-div">
+                  <button
+                    className="payable-amount-btn"
+                    onClick={() =>
+                      onClickToPay(
+                        selectedPrice + 0.18 * selectedPrice - passDeduction
+                      )
+                    }
+                  >
+                    ₹ {selectedPrice + 0.18 * selectedPrice - passDeduction}
+                  </button>
+                </div>
               </div>
             </div>
           </div>

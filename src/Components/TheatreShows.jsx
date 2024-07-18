@@ -22,9 +22,9 @@ function TheatreShows({ theatre, movieId }) {
     fetchShows();
   }, [theatre.id, movieId]);
 
-  const handleShowClick = (showId) => {
+  const handleShowClick = (showId, showTime) => {
     navigate(
-      `/theatres-list/${movieId}/select-tickets/${theatre.id}/${showId}`
+      `/theatres-list/${movieId}/select-tickets/${theatre.id}/show/${showId}/time/${showTime}`
     );
   };
 
@@ -37,11 +37,12 @@ function TheatreShows({ theatre, movieId }) {
             <button
               key={show.id}
               className="showtime-btn"
-              onClick={() => handleShowClick(show.id)}
+              onClick={() => handleShowClick(show.id, show.showTime)}
             >
               {new Date(show.showTime).toLocaleString()}
             </button>
           ))}
+          {console.log(shows)}
         </div>
       </div>
     </>
