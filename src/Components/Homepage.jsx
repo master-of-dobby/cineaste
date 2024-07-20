@@ -12,7 +12,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const homePageMovies = async () => {
-      const response = await axios.get("http://localhost:8080/movies");
+      const response = await axios.get("http://13.60.81.230:8080/movies");
       setLatestMovies(response.data);
     };
 

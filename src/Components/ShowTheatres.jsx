@@ -10,7 +10,7 @@ function ShowTheatres() {
   useEffect(() => {
     const getTheatres = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/theatres`);
+        const response = await axios.get(`http://13.60.81.230:8080/theatres`);
         setTheatres(response.data);
         console.log(response.data);
       } catch (err) {
