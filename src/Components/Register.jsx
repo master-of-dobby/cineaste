@@ -13,6 +13,10 @@ function Register() {
     location: "",
   });
 
+  const handleLoginClick = () => {
+    navigate(`/home`);
+  };
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -97,8 +101,10 @@ function Register() {
               <button className="submit-btn" type="submit">
                 Register
               </button>
-              <Link to="/">
-                <button className="submit-btn">Login</button>
+              <Link to="/home">
+                <button onClick={handleLoginClick} className="submit-btn">
+                  Login
+                </button>
               </Link>
             </div>
           </form>

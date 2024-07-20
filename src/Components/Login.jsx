@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import loginImage from "../Assets/login-reg.jpeg"; // Import the image
 import "../index.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
@@ -26,6 +26,12 @@ function Login() {
     }
   };
 
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate(`/home`);
+  };
+
   return (
     <div className="login">
       <div className="login-theme">
@@ -40,6 +46,7 @@ function Login() {
         </div>
 
         <div>
+          <h5>Just click Login :) </h5>
           <form className="login-form-content" onSubmit={validateCred}>
             {/* <label>Email</label> */}
             <input
@@ -63,7 +70,12 @@ function Login() {
             <br />
             {/* <a href="./register" className="sign-up-btn">Sign Up</a> */}
             <div className="button-container">
-              <button className="submit-btn" type="submit" disabled={loading}>
+              <button
+                onClick={handleLogin}
+                className="submit-btn"
+                type="submit"
+                disabled={loading}
+              >
                 {/* {loading ? "Logging in..." : "Login"} */}
                 Login
               </button>

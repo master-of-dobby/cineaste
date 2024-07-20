@@ -30,7 +30,6 @@ function TheatreShows({ theatre, movieId }) {
 
   return (
     <>
- 
       <div className="theatre-list-showtimes">
         <div className="showtimes">
           {shows.map((show) => (

@@ -77,7 +77,7 @@ function EditProfile() {
               type="text"
               name="firstName"
               value={user.firstName}
-              defaultValue={user ? user.firstName : ''}
+              defaultValue={user ? user.firstName : ""}
               onChange={handleInputChange}
             ></input>
             <br />
@@ -87,7 +87,7 @@ function EditProfile() {
               type="text"
               name="lastName"
               value={user.lastName}
-              defaultValue={user ? user.lastName : ''}
+              defaultValue={user ? user.lastName : ""}
               onChange={handleInputChange}
             ></input>
             <br />
@@ -97,7 +97,7 @@ function EditProfile() {
               type="text"
               name="location"
               value={user.location}
-              defaultValue={user ? user.location : ''}
+              defaultValue={user ? user.location : ""}
               onChange={handleInputChange}
             ></input>
             <br />
@@ -117,7 +117,7 @@ function EditProfile() {
             <input
               name="passHoling"
               type="text"
-              defaultValue={user ? user.pass : ''}
+              defaultValue={user ? user.pass : ""}
               value={user.pass ? user.pass.passType : " "}
             ></input>
             <br />

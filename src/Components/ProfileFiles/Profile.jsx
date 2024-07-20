@@ -65,12 +65,12 @@ const Profile = ({ user }) => {
         )}
         <div className="profile-buttons">
           {/* <Link to="/edit-profile/:user-id"> */}
-            <button
-              className="edit-profile-btn"
-              onClick={() => handleEditProfile(user)}
-            >
-              Edit Profile
-            </button>
+          <button
+            className="edit-profile-btn"
+            onClick={() => handleEditProfile(user)}
+          >
+            Edit Profile
+          </button>
           {/* </Link> */}
           <button className="logout-btn">Logout</button>
         </div>

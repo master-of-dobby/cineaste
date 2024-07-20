@@ -77,3 +77,111 @@ body {
 .payment-details h3 {
   margin-bottom: 1.7rem;
 }
+
+/* body{
+  background-color: #9fe2bf;
+} */
+
+.payment-pass-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9fe2bf;
+  height: 100vh;
+  color: white;
+}
+
+.payment-pass-holder-seat {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #533f5e;
+  padding: 2rem;
+  width: 40%;
+  align-items: center;
+  height: auto;
+  border-radius: 2rem;
+  border: none;
+  height: 100vh;
+}
+
+.payment-pass-holder-seat h2 {
+  color: white;
+}
+
+.payment-pass-holder-seat p {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  margin: 1rem; /* Removed top and left margin */
+  margin-top: -0.5rem;
+}
+
+.payment-pass-holder-seat button {
+  width: 7rem;
+  height: 3rem;
+  background-color: #f2d9ed;
+  color: black;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+
+}
+
+.payment-pass-holder-seat button:hover{
+  background-color: #9fe2bf;
+  color: #533f5e;
+  
+}
+
+.show-details {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.payment-pass-holder-seat .img-at-payment {
+  width: 100%;
+  height: 30%;
+  padding: 2rem;
+  background-image: url("https://th.bing.com/th/id/OIG3.V7Q46UiztM06tjkiJPgE?pid=ImgGn");
+  background-size: cover;
+  background-position: center;
+}
+
+.payment-pass-holder-seat .show-details-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.payment-pass-holder-seat .theatre-details-payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.payment-pass-holder-seat .theatre-details-payment .theatre-details-payment-p {
+  font-size: 1.5rem;
+  flex: 1;
+  text-align: center;
+  margin: 0 1rem; /* Adjust as needed */
+}
+
+.seats-payment{
+  width: 100%;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+

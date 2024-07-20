@@ -25,11 +25,11 @@
     "location": "Los Angeles",
     "active": true,
     "role": "USER",
-    "hasPass": false,
+    "hasPass": true,
     "password": "12334",
     "pass": {
       "passId": 53433,
-      "passType": "SILVER",
+      "passType": "GOLDEN",
       "moviesLeft": 5,
       "price": 499,
       "expiryDate": "12/05/2024"

@@ -21,6 +21,7 @@ import AddShow from "./Components/AddShow";
 import ShowTheatres from "./Components/ShowTheatres";
 import BookingPage from "./Components/BookingPage";
 import PaymentPage from "./Components/Payment";
+import PaymentSucceeded from "./Components/PaymentSucceeded";
 
 function App() {
   return (
@@ -53,8 +54,9 @@ function App() {
           ></Route>
           <Route path="/add-show/:theatreId" Component={AddShow}></Route>
           <Route path="/show-theaters" Component={ShowTheatres}></Route>
-          <Route path="/amount/:payableAmount/hasPass/:hasPass" Component={BookingPage}></Route>
+          {/* <Route path="/amount/:payableAmount/hasPass/:hasPass" Component={PaymentPage}></Route> */}
           <Route path="/payment" Component={PaymentPage}></Route>
+          <Route path="/paymentSucceeded" Component={PaymentSucceeded}></Route>
         </Routes>
       </Router>
     </>

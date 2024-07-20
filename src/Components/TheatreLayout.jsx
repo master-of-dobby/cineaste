@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import "./Styles/TheatreLayout.css";
 import userData from "../Collection/userData.json";
 import Header from "./HomePageFiles/Header";
@@ -256,9 +256,40 @@ function TheaterLayout() {
   const [passDeduction, setPassDeduction] = useState(0.0);
 
   const onClickToPay = (amountToPay) => {
-    console.log("Successfully Paid");
-    navigate(`/amount/${amountToPay}/hasPass/${isPassHolder}`);
+    // console.log("Successfully Paid");
+    // navigate(`/amount/${amountToPay}/hasPass/${isPassHolder}`);
     // window.location.reload();
+    // console.log("going to payment");
+    // console.log(selectedSeats);
+    // console.log(theatreDetails.location);
+
+    if (amountToPay == 0 && isPassHolder) {
+      return navigate("/paymentSucceeded", {
+        state: {
+          hasPass: isPassHolder,
+          total_amount: amountToPay,
+          seats_selected: selectedSeats,
+          show_id: showId,
+          theatre_name: theatreDetails.name,
+          theatre_location: theatreDetails.location,
+          show_time: showDateTime,
+        },
+        replace: true,
+      });
+    } else {
+      return navigate("/payment", {
+        state: {
+          hasPass: isPassHolder,
+          total_amount: amountToPay,
+          seats_selected: selectedSeats,
+          show_id: showId,
+          theatre_name: theatreDetails.name,
+          theatre_location: theatreDetails.location,
+          show_time: showDateTime,
+        },
+        replace: true,
+      });
+    }
   };
 
   const [showDateTime, setShowDateTime] = useState();
@@ -302,7 +333,16 @@ function TheaterLayout() {
                 <p>Available</p>
               </div> */}
             </div>
-            <hr style={{ color: "black", height: "0.1rem", width:"90%", boxShadow:"1px 1px black", marginTop:"0.3rem", marginBottom:"0.9rem" }}></hr>
+            <hr
+              style={{
+                color: "black",
+                height: "0.1rem",
+                width: "90%",
+                boxShadow: "1px 1px black",
+                marginTop: "0.3rem",
+                marginBottom: "0.9rem",
+              }}
+            ></hr>
             <div className="platinum-seats">
               {platinumSeats.map((row, rowIndex) => (
                 <div className="seat-row" key={`plat-row-${rowIndex}`}>

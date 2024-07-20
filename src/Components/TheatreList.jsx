@@ -26,23 +26,23 @@ function TheatreList() {
 
   return (
     <>
-    <div>
-      <Header />
-      <div className="theatres-list">
-        {filteredTheatreList.map((theatre) => (
-          <div className="theatre-list-details" key={theatre.id}>
-            <div className="theatre-details">
-              {" "}
-              <h3>{theatre.name}</h3>
-              <p>{theatre.location}</p>
-            </div>
+      <div>
+        <Header />
+        <div className="theatres-list">
+          {filteredTheatreList.map((theatre) => (
+            <div className="theatre-list-details" key={theatre.id}>
+              <div className="theatre-details">
+                {" "}
+                <h3>{theatre.name}</h3>
+                <p>{theatre.location}</p>
+              </div>
 
-            {/* <p>Capacity: {theatre.capacity}</p> */}
-            <TheatreShows theatre={theatre} movieId={movieId} />
-          </div>
-        ))}
+              {/* <p>Capacity: {theatre.capacity}</p> */}
+              <TheatreShows theatre={theatre} movieId={movieId} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 }

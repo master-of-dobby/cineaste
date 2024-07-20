@@ -11,7 +11,9 @@ function Redirect() {
     e.preventDefault();
 
     try {
-      axios.put(`http://localhost:8080/user/verify-account?email=${email}&otp=${otp}`);
+      axios.put(
+        `http://localhost:8080/user/verify-account?email=${email}&otp=${otp}`
+      );
       navigate("/");
     } catch (err) {
       console.error("OTP Authenticatoin Failed!");
@@ -21,10 +23,10 @@ function Redirect() {
 
   return (
     <div>
-        <div className="redirect-div">
-          {/* <h1>Email : {email}</h1>
+      <div className="redirect-div">
+        {/* <h1>Email : {email}</h1>
           <h2>OTP : {otp}</h2> */}
-          <h1>Thanks for Registering for us, click here to enjoy watching :) </h1>
+        <h1>Thanks for Registering for us, click here to enjoy watching :) </h1>
         <button onClick={handleClick}>Redirect</button>
       </div>
     </div>
