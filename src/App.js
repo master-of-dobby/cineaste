@@ -20,6 +20,7 @@ import TheatreLayout from "./Components/TheatreLayout";
 import AddShow from "./Components/AddShow";
 import ShowTheatres from "./Components/ShowTheatres";
 import BookingPage from "./Components/BookingPage";
+import PaymentPage from "./Components/Payment";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path="/add-show/:theatreId" Component={AddShow}></Route>
           <Route path="/show-theaters" Component={ShowTheatres}></Route>
           <Route path="/amount/:payableAmount/hasPass/:hasPass" Component={BookingPage}></Route>
+          <Route path="/payment" Component={PaymentPage}></Route>
         </Routes>
       </Router>
     </>
