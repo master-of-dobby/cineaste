@@ -10,6 +10,7 @@ const Profile = ({ user }) => {
     navigate(`/edit-profile/${user.id}`);
   };
 
+  // console.log(user);
   return (
     <div className="profile-container">
       <div className="profile-card">

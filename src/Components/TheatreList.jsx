@@ -13,7 +13,7 @@ function TheatreList() {
     const fetchTheatresByMovie = async () => {
       try {
         const response = await axios.get(
-          `http://13.60.81.230:8080/theatres-by-movie/${movieId}`
+          `http://localhost:8080/theatres-by-movie/${movieId}`
         );
         setFilteredTheatreList(response.data);
       } catch (err) {

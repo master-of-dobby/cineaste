@@ -27,7 +27,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post("http://13.60.81.230:8080/user/register", formData);
+      await axios.post("http://localhost:8080/user/register", formData);
       //alert("User registered successfully!");
       navigate("/", "/login");
     } catch (err) {

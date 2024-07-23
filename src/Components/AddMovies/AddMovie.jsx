@@ -38,10 +38,7 @@ function AddMovie() {
     console.log(formData);
 
     try {
-      const respone = await axios.post(
-        "http://13.60.81.230:8080/movie",
-        formData
-      );
+      const respone = await axios.post("http://localhost:8080/movie", formData);
       console.log(respone);
     } catch (err) {
       console.error(err);

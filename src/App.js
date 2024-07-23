@@ -22,6 +22,7 @@ import ShowTheatres from "./Components/ShowTheatres";
 import BookingPage from "./Components/BookingPage";
 import PaymentPage from "./Components/Payment";
 import PaymentSucceeded from "./Components/PaymentSucceeded";
+import SpeechRecognitionComponent from "./Components/SpeechRecognition";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
           {/* <Route path="/amount/:payableAmount/hasPass/:hasPass" Component={PaymentPage}></Route> */}
           <Route path="/payment" Component={PaymentPage}></Route>
           <Route path="/paymentSucceeded" Component={PaymentSucceeded}></Route>
+          <Route path="/speech" Component={SpeechRecognitionComponent}></Route>
         </Routes>
       </Router>
     </>

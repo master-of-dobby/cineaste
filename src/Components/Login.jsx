@@ -13,7 +13,7 @@ function Login() {
   const validateCred = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://13.60.81.230:8080/login`, {
+      const response = await axios.post(`http://localhost:8080/login`, {
         email: email,
         password: password,
       });

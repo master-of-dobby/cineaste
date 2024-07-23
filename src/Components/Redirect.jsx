@@ -5,14 +5,14 @@ import "../index.css";
 function Redirect() {
   const { email, otp } = useParams();
   const navigate = useNavigate();
-  // http://13.60.81.230:8080/user/verify-account?email=naveenm2718@gmail.com&otp=532012
+  // http://localhost:8080/user/verify-account?email=naveenm2718@gmail.com&otp=532012
 
   const handleClick = async (e) => {
     e.preventDefault();
 
     try {
       axios.put(
-        `http://13.60.81.230:8080/user/verify-account?email=${email}&otp=${otp}`
+        `http://localhost:8080/user/verify-account?email=${email}&otp=${otp}`
       );
       navigate("/");
     } catch (err) {

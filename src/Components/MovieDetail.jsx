@@ -21,7 +21,7 @@ function MovieDetail() {
     const fetchMovie = async () => {
       try {
         const response = await axios.get(
-          `http://13.60.81.230:8080/movie/${movieId}`
+          `http://localhost:8080/movie/${movieId}`
         );
         if (isMounted) {
           // Check if component is still mounted before updating state
@@ -58,7 +58,7 @@ function MovieDetail() {
   // useEffect(() => {
   //   const fetchData = async () => {
   //     try {
-  //       const response = await fetch("http://13.60.81.230:8080/movie");
+  //       const response = await fetch("http://localhost:8080/movie");
   //       console.log(response);
   //       setMovie(response.data);
   //     } catch (err) {

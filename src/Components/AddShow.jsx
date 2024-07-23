@@ -5,7 +5,7 @@ import "./Styles/AddShow.css";
 import Header from "./HomePageFiles/Header";
 
 function AddShow() {
-  const [theatre, setTheatre] = useState({});
+  const [theatre, setTheatre] = useState(null);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const { theatreId } = useParams();
@@ -14,7 +14,7 @@ function AddShow() {
     const getTheatre = async () => {
       try {
         const response = await axios.get(
-          `http://13.60.81.230:8080/theatre/${theatreId}`
+          `http://localhost:8080/theatre/${theatreId}`
         );
         setTheatre(response.data);
       } catch (err) {
@@ -51,22 +51,34 @@ function AddShow() {
     };
 
     try {
-      const response = await axios.post(
-        `http://13.60.81.230:8080/show`,
-        payload
-      );
+      const response = await axios.post(`http://localhost:8080/show`, payload);
       console.log(response.data);
       window.alert("Show added successfully");
       setDate("");
       setTime("");
     } catch (err) {
+      setError(err);
       console.log("Error in adding show " + err);
     }
   };
 
+  const [error, setError] = useState(null); // Track API errors
+
+  if (error) {
+    return <div>Error: {error.message}</div>; // Display error message
+  }
+
+  if (!theatre) {
+    return (
+      <>
+        <Header />
+        <div>Loading theatres...</div>
+      </>
+    ); // Display loading state
+  }
+
   return (
     <>
-      <Header />
       <div className="add-show-parent">
         <div className="add-show">
           <h1>Add Show</h1>

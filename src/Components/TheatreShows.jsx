@@ -11,7 +11,7 @@ function TheatreShows({ theatre, movieId }) {
     const fetchShows = async () => {
       try {
         const response = await axios.get(
-          `http://13.60.81.230:8080/shows/theatre/${theatre.id}/movie/${movieId}`
+          `http://localhost:8080/shows/theatre/${theatre.id}/movie/${movieId}`
         );
         setShows(response.data);
       } catch (err) {

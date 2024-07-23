@@ -25,7 +25,7 @@ function TheaterLayout() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://13.60.81.230:8080/theatre/${theatreId}`
+          `http://localhost:8080/theatre/${theatreId}`
         );
         setTheatreDetails(response.data);
       } catch (err) {
@@ -125,7 +125,7 @@ function TheaterLayout() {
     const fetchSeat = async () => {
       try {
         const response = await axios.get(
-          `http://13.60.81.230:8080/seats/${showId}`
+          `http://localhost:8080/seats/${showId}`
         );
         setShowSeats(response.data);
         assignBookedSeats(response.data);

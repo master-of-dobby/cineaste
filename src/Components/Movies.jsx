@@ -12,10 +12,10 @@ const Movies = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const response = await axios.get("http://13.60.81.230:8080/movies");
-        const response = await axios.get("http://13.60.81.230:8080/movies");
+        // const response = await axios.get("http://localhost:8080/movies");
+        const response = await axios.get("http://localhost:8080/movies");
         setMovies(response.data);
-        console.log(response.data); // Log the response data
+        // console.log(response.data); // Log the response data
       } catch (err) {
         setError(err); // Store error for handling
         console.error("Error fetching movies:", err);
