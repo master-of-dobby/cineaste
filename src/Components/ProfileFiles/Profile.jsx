@@ -18,7 +18,10 @@ const Profile = ({ user }) => {
           <img src={profileImage} alt="Profile" />
         </div>
         <div className="profile-details">
-          <h2>{`${user.firstName} ${user.lastName}`}</h2>
+          <h2>
+            {`${user.firstName} ${user.lastName}`} &nbsp;
+            <span style={{ fontSize: "0.7rem", fontWeight:"bolder" }}>{user.role}</span>
+          </h2>
           <p>User ID: {user.id}</p>
           <p>Email: {user.email}</p>
           <p>Location: {user.location}</p>

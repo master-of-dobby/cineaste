@@ -17,7 +17,7 @@ function AddTheater() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/movies");
+        const response = await axios.get("http://13.60.81.230:8080/movies");
         setMoviesList(response.data);
       } catch (err) {
         console.log("Movies NOT FOUND!" + err);
@@ -66,7 +66,7 @@ function AddTheater() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/theatre",
+        "http://13.60.81.230:8080/theatre",
         dataToSubmit
       );
       console.log(response);

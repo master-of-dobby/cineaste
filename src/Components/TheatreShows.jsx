@@ -11,7 +11,7 @@ function TheatreShows({ theatre, movieId }) {
     const fetchShows = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/shows/theatre/${theatre.id}/movie/${movieId}`
+          `http://13.60.81.230:8080/shows/theatre/${theatre.id}/movie/${movieId}`
         );
         setShows(response.data);
       } catch (err) {
@@ -34,7 +34,7 @@ function TheatreShows({ theatre, movieId }) {
         <div className="showtimes">
           {shows.map((show) => (
             <button
-              key={show.id}
+              // key={show.id}
               className="showtime-btn"
               onClick={() => handleShowClick(show.id, show.showTime)}
             >

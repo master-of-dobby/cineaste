@@ -25,7 +25,7 @@ function TheaterLayout() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/theatre/${theatreId}`
+          `http://13.60.81.230:8080/theatre/${theatreId}`
         );
         setTheatreDetails(response.data);
       } catch (err) {
@@ -125,7 +125,7 @@ function TheaterLayout() {
     const fetchSeat = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/seats/${showId}`
+          `http://13.60.81.230:8080/seats/${showId}`
         );
         setShowSeats(response.data);
         assignBookedSeats(response.data);
@@ -239,7 +239,7 @@ function TheaterLayout() {
         if (selectedCount === 1) {
           setPassDeduction(() => selectedPrice + 0.18 * selectedPrice);
         }
-        if (selectedCount == 0) {
+        if (selectedCount === 0) {
           setPassDeduction(0);
         }
       }
@@ -263,8 +263,22 @@ function TheaterLayout() {
     // console.log(selectedSeats);
     // console.log(theatreDetails.location);
 
-    if (amountToPay == 0 && isPassHolder) {
-      return navigate("/paymentSucceeded", {
+    if (amountToPay === 0 && isPassHolder) {
+      // return navigate("/paymentSucceeded", {
+      //   state: {
+      //     hasPass: isPassHolder,
+      //     total_amount: amountToPay,
+      //     seats_selected: selectedSeats,
+      //     show_id: showId,
+      //     theatre_name: theatreDetails.name,
+      //     theatre_location: theatreDetails.location,
+      //     show_time: showDateTime,
+      //     seats_count : selectedCount,
+      //     seat_numbers : selectedSeats
+      //   },
+      //   replace: true,
+      // });
+      return navigate("/payment", {
         state: {
           hasPass: isPassHolder,
           total_amount: amountToPay,
@@ -273,6 +287,8 @@ function TheaterLayout() {
           theatre_name: theatreDetails.name,
           theatre_location: theatreDetails.location,
           show_time: showDateTime,
+          seats_count: selectedCount,
+          seat_numbers: selectedSeats,
         },
         replace: true,
       });
@@ -286,6 +302,9 @@ function TheaterLayout() {
           theatre_name: theatreDetails.name,
           theatre_location: theatreDetails.location,
           show_time: showDateTime,
+          theatre_id: theatreId,
+          seats_count: selectedCount,
+          seat_numbers: selectedSeats,
         },
         replace: true,
       });

@@ -13,19 +13,22 @@ function PaymentSucceeded() {
     show_time,
     theatre_name,
     theatre_location,
+    seats_count,
+    seat_numbers,
+    theatre_id,
   } = location.state || {};
 
   useEffect(() => {
     const makeSeatsBooked = async () => {
       seats_selected.map(async (seatNum) => {
         const response = await axios.put(
-          `http://localhost:8080/seat/${show_id}/${seatNum}`
+          `http://13.60.81.230:8080/seat/${show_id}/${seatNum}`
         );
-        console.log(response);
+        // console.log(response);
       });
     };
     makeSeatsBooked();
-  });
+  }, []);
 
   return (
     <>

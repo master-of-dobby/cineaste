@@ -28,6 +28,7 @@ function App() {
   return (
     <>
       <Router>
+        {/* 13.60.81.230:8080 */}
         <Routes>
           <Route exact path="/" Component={Login} />
           <Route path="/register" Component={Register} />

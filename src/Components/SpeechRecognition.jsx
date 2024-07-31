@@ -1,18 +1,18 @@
 // SpeechRecognitionComponent.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // Web Speech API for speech recognition
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
 const SpeechRecognitionComponent = () => {
   const [listening, setListening] = useState(false);
-  const [response, setResponse] = useState('');
+  const [response, setResponse] = useState("");
 
   const startListening = () => {
     setListening(true);
@@ -25,10 +25,10 @@ const SpeechRecognitionComponent = () => {
     setListening(false);
 
     // Send transcript to backend for processing
-    const res = await fetch('http://localhost:8080/api/book-ticket', {
-      method: 'POST',
+    const res = await fetch("http://13.60.81.230:8080/api/book-ticket", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ query: transcript }),
     });
@@ -52,7 +52,7 @@ const SpeechRecognitionComponent = () => {
     <div>
       <h1>AI Ticket Booking</h1>
       <button onClick={startListening} disabled={listening}>
-        {listening ? 'Listening...' : 'Start Voice Input'}
+        {listening ? "Listening..." : "Start Voice Input"}
       </button>
       {response && <p>{response}</p>}
     </div>

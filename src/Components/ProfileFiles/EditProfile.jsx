@@ -15,7 +15,7 @@ function EditProfile() {
       // Fetch the data for this particular user
 
       try {
-        const response = axios.get(`http://localhost:8080/user/${userId}`);
+        const response = axios.get(`http://13.60.81.230:8080/user/${userId}`);
         setUser((await response).data);
         // console.log("response " + (await response).data);
         console.log(user);
@@ -31,7 +31,7 @@ function EditProfile() {
   const updateData = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:8080/user/${userId}`,
+        `http://13.60.81.230:8080/user/${userId}`,
         user
       );
       console.log(response.data);

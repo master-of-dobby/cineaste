@@ -14,7 +14,7 @@ function AddShow() {
     const getTheatre = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/theatre/${theatreId}`
+          `http://13.60.81.230:8080/theatre/${theatreId}`
         );
         setTheatre(response.data);
       } catch (err) {
@@ -51,7 +51,10 @@ function AddShow() {
     };
 
     try {
-      const response = await axios.post(`http://localhost:8080/show`, payload);
+      const response = await axios.post(
+        `http://13.60.81.230:8080/show`,
+        payload
+      );
       console.log(response.data);
       window.alert("Show added successfully");
       setDate("");
